@@ -1,0 +1,25 @@
+
+.dynamic .set-middle-content>ul li span {
+    width: 25%;
+}
+
+.dynamic .set-middle-content>ul li {
+    background: none;
+    cursor: pointer;
+}
+
+.management .set-middle-content>ul li {
+    background: none;
+    ;
+}
+
+.dynamic .set-middle-content>ul li:first-child
+{
+    background: rgba(255, 255, 255, .5);
+    cursor: default;
+}
+
+
+.dynamic .set-middle-content>ul li:hover {
+    background: rgba(255, 255, 255, .35);
+}

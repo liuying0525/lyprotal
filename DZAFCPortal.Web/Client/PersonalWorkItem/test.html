@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery/jquery-1.11.1.js"></script>
+    <script src="../Scripts/Client/ThirdLibs/jquery.pager_2014_08.js"></script>
+
+    <script type="text/javascript">
+
+        pageCallback = function (currentIndex) {
+            $.ajax({
+                type: "get",
+                url: 'Ajax/getUserHandler.ashx',
+                data: {
+                    Op: "choose",
+                    searchKey: $("#txtKey").val(),
+                    //checkedUsers: getQueryString("myFriends"),
+                    orgId: orgId,
+                    pagesize: pagesize,
+                    currentIndex: currentIndex
+                },
+                dataType: "json",
+                success: function (data) {
+                    //为视图的 users 重新赋值
+                    //currentModel.users(data.datas);
+
+                    //设置分页
+                    $('#pager1').pager({
+                        pagenumber: currentIndex,
+                        recordcount: data.recordCount,
+                        pagesize: pagesize,
+                        buttonClickCallback: pageCallback,
+                        firsttext: '首页',
+                        prevtext: '前一页',
+                        nexttext: '下一页',
+                        lasttext: '尾页',
+                        recordtext: '共{0}页，{1}条记录',
+                        numericButtonCount: 0
+                    });
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

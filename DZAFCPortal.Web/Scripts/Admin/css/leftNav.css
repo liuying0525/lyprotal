@@ -1,0 +1,240 @@
+﻿body {
+    margin: 0;
+}
+
+
+.topNav {
+    margin-left: 0;
+    margin-right: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0px 70px;
+    height: 59px;
+    line-height: 59px;
+    position: relative;
+    z-index: 100;
+    font-size: 22px;
+    color: #07577A;
+    border-bottom: 1px solid #007A9C;
+    font-family: 'Microsoft YaHei';
+    background-color: #F3F3F3;
+    /* chrome 2+, safari 4+; multiple color stops */
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #F3F3F3), color-stop(0.66, #F3F3F3), color-stop(0.83, #e2e2e2));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#F3F3F3, #F3F3F3, #e2e2e2);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#F3F3F3, #F3F3F3, #e2e2e2);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#e2e2e2');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#e2e2e2')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#F3F3F3, #F3F3F3, #e2e2e2);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#F3F3F3, #F3F3F3, #e2e2e2);
+    /* 标准写法 */
+    background-image: linear-gradient(#F3F3F3, #F3F3F3, #e2e2e2);
+}
+
+.topNav_image {
+    height: 40px;
+    position: absolute;
+    top: 9px;
+    right: 20px;
+}
+
+.topNav_logoimage {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+.container_main {
+}
+
+.container_main_inner:last-child {
+    clear: both;
+}
+
+.sidebar {
+    width: 190px;
+    float: left;
+    position: relative;
+    border: 1px solid #007A9C;
+    border-width: 0 1px 0 0;
+    background-color: #f2f2f2;
+}
+
+    .sidebar:before {
+        content: "";
+        display: block;
+        width: 190px;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+        background-color: #f2f2f2;
+        border: 1px solid #007A9C;
+        border-width: 0 1px 0 0;
+    }
+
+.content_main {
+    margin-left: 190px;
+    margin-right: 0;
+    margin-top: 0;
+    min-height: 100%;
+    padding: 0;
+}
+
+.nav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .nav_list:before, .nav_list:after {
+        display: table;
+        content: " ";
+    }
+
+    .nav_list > li {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-top: 1px solid #fcfcfc;
+        border-bottom: 1px solid #bbbbbb;
+        position: relative;
+    }
+
+        .nav_list > li > a {
+            display: block;
+            height: 38px;
+            line-height: 36px;
+            padding: 0 16px 0 15px;
+            text-shadow: none !important;
+            font-size: 13px;
+            text-decoration: none;
+            background-color: #F3F3F3;
+            /* chrome 2+, safari 4+; multiple color stops */
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #ffffff), color-stop(0.66, #F3F3F3), color-stop(0.83, #e2e2e2));
+            /* chrome 10+, safari 5.1+ */
+            background-image: -webkit-linear-gradient(#ffffff, #F3F3F3, #e2e2e2);
+            /* firefox; multiple color stops */
+            background-image: -moz-linear-gradient(top,#ffffff, #F3F3F3, #e2e2e2);
+            /* ie 6+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#e2e2e2');
+            /* ie8 + */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F3F3F3', endColorstr='#e2e2e2')";
+            /* ie10 */
+            background-image: -ms-linear-gradient(#ffffff, #F3F3F3, #e2e2e2);
+            /* opera 11.1 */
+            background-image: -o-linear-gradient(#ffffff, #F3F3F3, #e2e2e2);
+            /* 标准写法 */
+            background-image: linear-gradient(#ffffff, #F3F3F3, #e2e2e2);
+            color: #007A9C;
+        }
+
+
+            .nav_list > li > a > i {
+                display: inline-block;
+                vertical-align: middle;
+                min-width: 30px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: normal;
+                margin-right: 2px;
+            }
+
+.menu_text {
+}
+
+.nav_list > li .submenu {
+    display: block;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+
+    .nav_list > li .submenu li {
+        position: relative;
+        margin: 0;
+    }
+
+        .nav_list > li .submenu li.active {
+            background: #075579;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #007A9C), color-stop(0.66, #075579));
+            /* chrome 10+, safari 5.1+ */
+            background-image: -webkit-linear-gradient(#007A9C, #075579);
+            /* firefox; multiple color stops */
+            background-image: -moz-linear-gradient(top,#007A9C, #075579);
+            /* ie 6+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007A9C', endColorstr='#075579');
+            /* ie8 + */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007A9C', endColorstr='#075579')";
+            /* ie10 */
+            background-image: -ms-linear-gradient(#007A9C, #075579);
+            /* opera 11.1 */
+            background-image: -o-linear-gradient(#007A9C, #075579);
+            /* 标准写法 */
+            background-image: linear-gradient(#007A9C, #075579);
+        }
+
+            .nav_list > li .submenu li.active a {
+                color: #ffffff;
+            }
+
+.nav_list > li > .submenu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    border: 1px dotted #9dbdd6;
+    border-width: 0 0 0 1px;
+}
+
+.nav_list > li > .submenu > li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 7px;
+    left: 20px;
+    top: 17px;
+    border-top: 1px dotted #9dbdd6;
+}
+
+.nav_list > li .submenu > li > a {
+    display: block;
+    position: relative;
+    color: #6C7B8B;
+    padding: 7px 0 9px 37px;
+    margin: 0;
+    text-decoration: none;
+    border-top: 1px dotted #e4e4e4;
+    font-size: 14px;
+}
+
+.show {
+    display: block;
+}
+
+.menu-text {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+}

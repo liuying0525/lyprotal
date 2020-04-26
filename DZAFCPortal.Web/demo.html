@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://passport.cnblogs.com/scripts/jsencrypt.min.js"></script>
+    <script type="text/javascript">
+        // 使用jsencrypt类库加密js方法，
+        function encryptRequest(reqUrl, data, publicKey) {
+            var encrypt = new JSEncrypt();
+            encrypt.setPublicKey(publicKey);
+            // ajax请求发送的数据对象
+            var sendData = new Object();
+            // 将data数组赋给ajax对象
+            for (var key in data) {
+                sendData[key] = encrypt.encrypt(data[key]);
+            }
+
+            $.ajax({
+                url: reqUrl,
+                type: 'post',
+                data: sendData,
+                dataType: 'json',
+                //contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    console.info(data);
+                },
+                error: function (xhr) {
+                    //console.error('出错了');
+                    //test
+                }
+            });
+
+        }
+
+        // Call this code when the page is done loading.
+        $(function () {
+
+            $('#testme').click(function () {
+
+                var data = [];
+                data['username'] = $('#username').val();
+                data['passwd'] = $('#passwd').val();
+
+                var pkey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCk4dIe4Kqke8gc2G9SjhVuwzIifwYJh3LC718R2kBcRnAULFfAB8gL6kNd7bb98hfgQgNiH7ft8KNeCihPjRziZZoeuWZelk2sl9rfBUsgnAsuukjUQ+zo2Yzqq9T+p4TF2olhBjlvnsQSDhAH+YhYCp8Wm5mfKgwkqM3k+cqaaQIDAQAB";
+                encryptRequest('/demo.aspx', data, pkey);
+            });
+
+            $("#btn_uploadimg").click(function () {
+                var fileObj = document.getElementById("uploadfile").files; // js 获取文件对象
+                if (fileObj.length == 0) {
+                    alert("请选择附件");
+                    return;
+                }
+
+                var formFile = new FormData();
+                for (var i = 0; i < fileObj.length; i++) {
+                    formFile.append("file", fileObj[i]); //加入文件对象
+                }
+
+                formFile.append("path", $("#path").text())
+
+                //formFile.append("action", "UploadVMKImagePath");
+
+                var data = formFile;
+                //{ "FILES": data, "PATH": $("#path").text() },
+                $.ajax({
+                    url: "Client/AjaxPage/demo.ashx",
+                    data: data,
+                    type: "Post",
+                    dataType: "json",
+                    cache: false,//上传文件无需缓存
+                    processData: false,//用于对data参数进行序列化处理 这里必须false
+                    contentType: false, //必须
+                    success: function (result) {
+                        alert("上传完成!");
+                    },
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <label for="pubkey">Public Key</label><br />
+            <textarea id="pubkey" rows="15" cols="65">
+                MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCk4dIe4Kqke8gc2G9SjhVuwzIi
+                fwYJh3LC718R2kBcRnAULFfAB8gL6kNd7bb98hfgQgNiH7ft8KNeCihPjRziZZoe
+                uWZelk2sl9rfBUsgnAsuukjUQ+zo2Yzqq9T+p4TF2olhBjlvnsQSDhAH+YhYCp8W
+                m5mfKgwkqM3k+cqaaQIDAQAB
+            </textarea><br />
+            <label for="input">Text to encrypt:</label><br />
+            name:<input id="username" name="username" type="text"></input><br />
+            password:<input id="passwd" name="passwd" type="password"></input><br />
+            <input id="testme" type="button" value="submit" /><br />
+        </div>
+
+        <hr />
+        <div>
+            <input type="file" class="replyFileid" name="uploadfile" id="uploadfile" multiple="multiple">
+            <input type="text" id="path" />
+            <a class="layui-btn layui-btn-mini btn btn-primary" id="btn_uploadimg">上传</a>
+        </div>
+    </form>
+</body>
+</html>

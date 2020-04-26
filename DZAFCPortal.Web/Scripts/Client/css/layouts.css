@@ -1,0 +1,2915 @@
+﻿.ny_header {
+    height: 115px;
+    width: 100%;
+    min-width: 1024px;
+    position: relative;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.ny_header_info {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.ny_header_info_div {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.ny_header_info_logo {
+    margin-top: 8px;
+    width: 470px;
+    height: 59px;
+}
+
+.ny_header_info_person {
+    height: 67px;
+    width: 180px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.ny_header_info_person_name {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    height: 20px;
+    width: 120px;
+    text-align: right;
+}
+
+.ny_header_info_person_setting {
+    position: absolute;
+    right: 50px;
+    top: 13px;
+    height: 30px;
+    line-height: 36px;
+    width: 70px;
+    text-align: right;
+}
+
+.ny_header_info_person_pic {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+}
+
+.ny_header_info_person_setting_div {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 140px;
+    min-height: 40px;
+    border: 1px solid #007A9C;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    padding: 10px 5px;
+    z-index: 3;
+}
+
+.ny_header_info_person_setting_div_ul {
+    width: 100%;
+}
+
+    .ny_header_info_person_setting_div_ul li {
+        height: 27px;
+        width: 100%;
+        line-height: 27px;
+        padding: 0 15px;
+    }
+
+        .ny_header_info_person_setting_div_ul li:hover {
+            background-color: #CCE4EB;
+        }
+
+        .ny_header_info_person_setting_div_ul li.divide {
+            border-top: 1px dotted #99C9D7;
+        }
+
+.ny_header_uldiv {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #007A9C;
+    -moz-box-shadow: 0px 3px 2px #8da8ba;
+    -webkit-box-shadow: 0px 3px 2px #8da8ba;
+    box-shadow: 0px 3px 2px #8da8ba;
+}
+
+.ny_header_ul {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+    .ny_header_ul li.ny_header_ul_li {
+        float: left;
+        height: 100%;
+        padding: 0 13px;
+        margin-right: 1px;
+        position: relative;
+    }
+
+        .ny_header_ul li.ny_header_ul_li a {
+            display: block;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 40px;
+            width: 100%;
+            width: 100%;
+        }
+
+        .ny_header_ul li.ny_header_ul_li:hover {
+            background-color: #f7f7f7;
+        }
+
+            .ny_header_ul li.ny_header_ul_li:hover a {
+                color: #007A9C;
+            }
+
+        .ny_header_ul li.ny_header_ul_li.active {
+            background-color: #CCE4EB;
+        }
+
+            .ny_header_ul li.ny_header_ul_li.active a {
+                color: #007A9C;
+            }
+
+.ny_header_ulsub {
+    z-index: 100;
+    position: absolute;
+    top: 40px;
+    left: -18px;
+    width: 120px;
+    padding: 5px 0 10px;
+    background: #f7f7f7;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    /*-moz-box-shadow: 0 4px 10px rgba(150, 150, 150, 0.51);
+    -webkit-box-shadow: 0 4px 10px rgba(150, 150, 150, 0.51);
+    box-shadow: 0 4px 10px rgba(150, 150, 150, 0.51);*/
+}
+
+    .ny_header_ulsub li {
+        height: 30px;
+        line-height: 30px;
+        color: #007A9C;
+        background: #f7f7f7;
+        cursor: pointer;
+        border-bottom: 1px solid #e1e1e1;
+        border-left: 4px solid #f7f7f7;
+        border-right: 8px solid #f7f7f7;
+        text-align: center;
+    }
+
+        .ny_header_ulsub li a {
+            height: 30px !important;
+            line-height: 30px !important;
+            font-weight: normal !important;
+        }
+
+        .ny_header_ulsub li:hover {
+            background: #CCE4EB;
+            color: #007A9C;
+            border-bottom: 1px solid #e1e1e1;
+            border-right: 8px solid #CCE4EB;
+            border-left: 4px solid #007A9C;
+        }
+
+.ny_right_setting_icon {
+    position: absolute;
+    top: 18px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+}
+
+.ny_right_block {
+    position: fixed;
+    top: 12%;
+    right: 0px;
+    width: 345px;
+    height: 590px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.ny_change_icon {
+    z-index: 4;
+}
+
+.ny_right_block_20 {
+    width: 50px !important;
+}
+
+.ny_right_block_bg {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 335px;
+    height: 550px;
+    overflow: hidden;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: url(../images/ny_right_block_bg.png) left bottom no-repeat;
+}
+
+.ny_right_block_bg_right20 {
+    right: -20px;
+}
+
+.ny_right_block_bg_right300 {
+    right: -300px;
+}
+
+.ny_right_block_bg:hover {
+    -moz-box-shadow: 0 0 20px #007A9C !important;
+    -webkit-box-shadow: 0 0 20px #007A9C !important;
+    box-shadow: 0 0 20px #007A9C !important;
+}
+
+.ny_right_block_close_icon {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 30px;
+    height: 100%;
+    background: url(../images/ny_right_close_icon.png) center no-repeat;
+}
+
+    .ny_right_block_close_icon:hover {
+        background: url(../images/ny_right_close_icon2.png) center no-repeat !important;
+    }
+
+.ny_right_block_open_icon {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 30px;
+    height: 100%;
+    background: url(../images/ny_right_open_icon.png) center no-repeat;
+}
+
+    .ny_right_block_open_icon:hover {
+        background: url(../images/ny_right_open_icon2.png) center no-repeat !important;
+    }
+
+.ny_right_block_title {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007A9C;
+    text-align: center;
+}
+
+.ny_right_block_ul {
+    width: 275px;
+    height: 470px;
+    margin: 0 30px 20px;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+    .ny_right_block_ul li {
+        width: 80px;
+        height: 100px;
+        float: left;
+        margin-left: 5px;
+        background: none;
+    }
+
+        .ny_right_block_ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background: none;
+        }
+
+        .ny_right_block_ul li:hover, .ny_right_block_ul li:hover a:hover {
+            background: none;
+        }
+
+        .ny_right_block_ul li a img.ny_right_block_ul_icon {
+            display: block;
+            width: 56px;
+            height: 56px;
+            margin: 0 auto;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -moz-box-shadow: 0 0 20px #aaaaaa !important;
+            -webkit-box-shadow: 0 0 20px #aaaaaa !important;
+            box-shadow: 0 0 20px #aaaaaa !important;
+        }
+
+        .ny_right_block_ul li a:hover img.ny_right_block_ul_icon {
+            -moz-box-shadow: 0 0 20px #fff !important;
+            -webkit-box-shadow: 0 0 20px #fff !important;
+            box-shadow: 0 0 20px #fff !important;
+        }
+
+        .ny_right_block_ul li a span.ny_right_block_ul_title {
+            display: block;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+        .ny_right_block_ul li a:visited span.ny_right_block_ul_title {
+            text-decoration: none;
+        }
+
+.ny_container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+    z-index: 2;
+}
+
+.ny_boxshadow {
+    -moz-box-shadow: 0 0 20px #8da8ba;
+    -webkit-box-shadow: 0 0 20px #8da8ba;
+    box-shadow: 0 0 20px #8da8ba;
+}
+
+    .ny_boxshadow:hover {
+        -moz-box-shadow: 0 0 20px #ffffff;
+        -webkit-box-shadow: 0 0 20px #ffffff;
+        box-shadow: 0 0 20px #ffffff;
+    }
+
+.ny_container_boxshadow {
+    -moz-box-shadow: 0 0 20px #8da8ba;
+    -webkit-box-shadow: 0 0 20px #8da8ba;
+    box-shadow: 0 0 20px #8da8ba;
+}
+
+.ny_container_row {
+    width: 100%;
+    height: 184px;
+    margin-bottom: 20px;
+}
+
+.ny_container_nynews {
+    width: 592px;
+    height: 184px;
+    background-color: #0C8FB4;
+    /* chrome 2+, safari 4+; multiple color stops */
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.32, #0C8FB4), color-stop(0.83, #0C80A0));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#0C8FB4, #0C80A0);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#0C8FB4, #0C80A0);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0C8FB4', endColorstr='#0C80A0');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#0C8FB4', endColorstr='#0C80A0')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#0C8FB4, #0C80A0);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#0C8FB4, #0C80A0);
+    /* 标准写法 */
+    background-image: linear-gradient(#0C8FB4, #0C80A0);
+    position: relative;
+}
+
+.ny_container_nynews_bg {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 123px;
+    height: 120px;
+}
+
+.ny_container_nynews_title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 95px;
+    height: 144px;
+}
+
+.ny_container_nynews_title_name {
+    display: block;
+    width: 20px;
+    height: 105px;
+    line-height: 25px;
+    font-size: 23px;
+    color: #ffffff;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.ny_container_nynews_title_more {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #85C7DA;
+    font-weight: bold;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+    .ny_container_nynews_title_more:hover {
+        color: #ffffff;
+    }
+
+.ny_container_nynews_list_title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 467px;
+    height: 32px;
+    background-color: #68B9D0;
+    border-bottom: 1px solid #21516A;
+}
+
+    .ny_container_nynews_list_title li.ny_container_nynews_list_title_li {
+        height: 32px;
+        line-height: 32px;
+        color: #ffffff;
+        float: left;
+        padding: 0 15px;
+        cursor: pointer;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+        .ny_container_nynews_list_title li.ny_container_nynews_list_title_li:hover {
+            background-color: #377687;
+        }
+
+    .ny_container_nynews_list_title li.active {
+        background-color: #21516A;
+        font-weight: bold;
+    }
+
+/*.ny_container_nynews_list {
+    width: 437px;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}*/
+
+.ny_container_nynews_ul {
+    width: 437px;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}
+
+    .ny_container_nynews_ul li {
+        padding: 0px;
+        font-weight: normal;
+    }
+
+    .ny_container_nynews_ul li, .ny_container_staff_ul li {
+        list-style-type: disc;
+        color: #ffffff;
+        line-height: 26px;
+        height: 26px;
+        width: 437px;
+    }
+
+        .ny_container_nynews_ul li a, .ny_container_staff_ul li a {
+            display: inline-block;
+            height: 20px;
+            max-width: 407px;
+            color: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+            .ny_container_nynews_ul li a:hover, .ny_container_staff_ul li a:hover {
+                text-decoration: underline;
+            }
+
+.ny_container_staff_ul {
+    width: 100%;
+    padding-left: 20px;
+}
+
+    .ny_container_staff_ul li {
+        width: 330px;
+    }
+
+        .ny_container_staff_ul li a {
+            max-width: 302px;
+        }
+
+        .ny_container_nynews_ul li img, .ny_container_staff_ul li img {
+            margin-bottom: 8px;
+        }
+
+.ny_container_block_icon {
+    display: block;
+    margin: 20px auto 0px;
+}
+
+.ny_container_email {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #299FC1;
+    position: relative;
+}
+
+.ny_container_tast {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #1C6E85;
+    position: relative;
+}
+
+.ny_container_block_title {
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ny_container_service {
+    width: 184px;
+    height: 184px;
+    background-color: #50AAC3;
+}
+
+.ny_container_picture {
+    width: 388px;
+    height: 184px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.ny_container_picture_size {
+    width: 388px;
+    height: 184px;
+}
+
+.ny_container_report {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #248EB6;
+}
+
+.ny_container_document {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #2EA2C2;
+}
+
+.ny_container_job {
+    width: 184px;
+    height: 184px;
+    background-color: #0B7FA0;
+}
+
+.ny_container_safety {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #5195A9;
+}
+
+.ny_container_dang {
+    width: 184px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #306270;
+}
+
+.ny_container_staff {
+    width: 388px;
+    height: 184px;
+    margin-left: 20px;
+    background-color: #0B7FA0;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.ny_container_staff_bg {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 142px;
+    height: 146px;
+}
+
+.ny_container_staff_title {
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+
+.ny_container_staff_title_name {
+    display: block;
+    width: 200px;
+    height: 100%;
+    line-height: 30px;
+    background: url(../images/ny_container_staff_icon.png) no-repeat left center;
+    color: #ffffff;
+    font-size: 18px;
+    padding-left: 35px;
+}
+
+.ny_container_staff_title_more {
+    display: block;
+    width: 80px;
+    height: 100%;
+    font-size: 18px;
+    color: #85C7DA;
+    font-weight: bold;
+    text-align: right;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+    .ny_container_staff_title_more:hover {
+        color: #ffffff;
+    }
+
+
+.ny_footer {
+    border-top: 6px solid #007A9C;
+    width: 100%;
+    min-width: 1024px;
+    height: 57px;
+    background: #ffffff;
+    line-height: 50px;
+    color: #757575;
+    z-index: 1;
+}
+
+.ny_footer_block {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ny_container_leftul_bg {
+    position: absolute;
+    left: 15px;
+    bottom: 6px;
+    width: 200px;
+    z-index: 1;
+}
+
+.ny_footer_address {
+    padding: 0 20px 0 27px;
+    background: url(../images/ny_footer_address_icon.png) no-repeat center left;
+}
+
+.ny_bread {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+
+    .ny_bread span {
+        padding: 0;
+    }
+
+.ny_left_sub {
+    margin-top: 10px;
+    width: 230px;
+    z-index: 2;
+    position: absolute;
+}
+
+.ny_left_sub_title {
+    display: block;
+    width: 230px;
+    height: 55px;
+    font-family: 'Microsoft YaHei';
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #FFFFFF;
+    background: #DDDDDD;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #EEEEEE), color-stop(0.66, #D3D3D3));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#EEEEEE, #D3D3D3);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#EEEEEE, #D3D3D3);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#D3D3D3');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#D3D3D3')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#EEEEEE, #D3D3D3);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#EEEEEE, #D3D3D3);
+    /* 标准写法 */
+    background-image: linear-gradient(#EEEEEE, #D3D3D3);
+    overflow: hidden;
+    position: relative;
+}
+
+.ny_left_sub_title_bg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 19px;
+}
+
+.ny_left_sub_title span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #007A9C;
+    text-shadow: 0 2px 0px #ffffff;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.ny_sub_title span {
+    background: url(../images/BEA_sub_title_Efamily.png) no-repeat 85% 24px;
+}
+
+.ny_left_sub_ul {
+    display: block;
+    width: 225px;
+    margin: 0 auto;
+}
+
+    .ny_left_sub_ul li {
+        width: 100%;
+        border: 1px solid #C1C9CD;
+        border-top: none;
+        background: #D9E8EE;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #F7F7F7), color-stop(0.66, #D9E8EE));
+        /* chrome 10+, safari 5.1+ */
+        background-image: -webkit-linear-gradient(#F7F7F7, #D9E8EE);
+        /* firefox; multiple color stops */
+        background-image: -moz-linear-gradient(top,#F7F7F7, #D9E8EE);
+        /* ie 6+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7F7F7', endColorstr='#D9E8EE');
+        /* ie8 + */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7F7F7', endColorstr='#D9E8EE')";
+        /* ie10 */
+        background-image: -ms-linear-gradient(#F7F7F7, #D9E8EE);
+        /* opera 11.1 */
+        background-image: -o-linear-gradient(#F7F7F7, #D9E8EE);
+        /* 标准写法 */
+        background-image: linear-gradient(#F7F7F7, #D9E8EE);
+    }
+
+        .ny_left_sub_ul li a {
+            display: block;
+            width: 100%;
+            min-height: 40px;
+            color: #000000;
+            position: relative;
+        }
+
+            .ny_left_sub_ul li a img {
+                position: absolute;
+                top: 8px;
+                left: 10px;
+            }
+
+            .ny_left_sub_ul li a span {
+                font-family: 'Microsoft YaHei';
+                display: block;
+                width: 100%;
+                padding-left: 40px;
+                text-shadow: 0 1px 0px #ffffff;
+                padding-top: 2px;
+            }
+
+                .ny_left_sub_ul li a span.ny_left_sub_ul_eng {
+                    font-size: 12px;
+                    padding-top: 0;
+                }
+
+        .ny_left_sub_ul li:hover a span {
+            color: #007A9C;
+            font-weight: bold;
+        }
+
+        .ny_left_sub_ul li.active {
+            background: #0B7FC8;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #61D2FB), color-stop(0.66, #0B7FC8));
+            /* chrome 10+, safari 5.1+ */
+            background-image: -webkit-linear-gradient(#61D2FB, #0B7FC8);
+            /* firefox; multiple color stops */
+            background-image: -moz-linear-gradient(top,#61D2FB, #0B7FC8);
+            /* ie 6+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8');
+            /* ie8 + */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8')";
+            /* ie10 */
+            background-image: -ms-linear-gradient(#61D2FB, #0B7FC8);
+            /* opera 11.1 */
+            background-image: -o-linear-gradient(#61D2FB, #0B7FC8);
+            /* 标准写法 */
+            background-image: linear-gradient(#61D2FB, #0B7FC8);
+        }
+
+            .ny_left_sub_ul li.active a span {
+                color: #ffffff;
+                text-shadow: none;
+            }
+
+.ny_mainlist {
+    width: 750px;
+    min-height: 400px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border: 1px solid #007A9C;
+    position: relative;
+}
+
+.ny_mainlist_title {
+    width: 100%;
+    height: 52px;
+    border-bottom: 4px solid #007A9C;
+    background: #DDDDDD;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #EEEEEE), color-stop(0.66, #D3D3D3));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#EEEEEE, #D3D3D3);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#EEEEEE, #D3D3D3);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#D3D3D3');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#D3D3D3')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#EEEEEE, #D3D3D3);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#EEEEEE, #D3D3D3);
+    /* 标准写法 */
+    background-image: linear-gradient(#EEEEEE, #D3D3D3);
+    overflow: hidden;
+}
+
+    .ny_mainlist_title span {
+        display: block;
+        font-size: 21px;
+        font-weight: bold;
+        font-family: 'Microsoft YaHei';
+        color: #007A9C;
+        text-shadow: 0 2px 0 #ffffff;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .ny_mainlist_title a.ny_mainlist_title_exchangemail {
+        font-size: 12px;
+        font-weight: normal;
+        font-family: 'Microsoft YaHei';
+        color: #333333;
+        text-shadow: none;
+        padding-left: 20px;
+        padding-top: 19px;
+    }
+
+        .ny_mainlist_title a.ny_mainlist_title_exchangemail:hover {
+            color: #007A9C;
+            text-decoration: underline;
+        }
+
+        .ny_mainlist_title a.ny_mainlist_title_exchangemail img {
+            width: 14px;
+            height: 14px;
+            margin-top: -2px;
+            margin-right: 5px;
+        }
+
+.ny_mainlist_title_emailnum {
+    display: inline-block !important;
+    height: 18px !important;
+    width: auto !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    color: #ffffff !important;
+    background-color: #F89021;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0px 4px !important;
+    text-shadow: none !important;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.ny_mainlist_title ul li {
+    float: left;
+    height: 38px;
+    margin-top: 15px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    margin-right: 1px;
+}
+
+    .ny_mainlist_title ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        padding: 10px 20px;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .ny_mainlist_title ul li:hover a {
+        color: #ffffff;
+        background-color: #8da8ba;
+    }
+
+    .ny_mainlist_title ul li.active a {
+        color: #ffffff;
+        background-color: #007A9C;
+    }
+
+.ny_mainlist_search {
+    height: 30px;
+}
+
+    .ny_mainlist_search .ny_mainlist_search_input {
+        width: 200px;
+        height: 30px;
+        line-height: 20px;
+        padding: 3px 10px;
+        margin: 0px;
+        margin-right: 3px;
+    }
+
+    .ny_mainlist_search .ny_mainlist_search_select {
+        width: 120px;
+        height: 30px;
+        line-height: 20px;
+        padding: 3px 3px 3px 5px;
+        margin: 0px;
+    }
+
+    .ny_mainlist_search .ny_mainlist_search_span {
+        padding-right: 10px;
+        display: inline-block;
+        height: 30px;
+        width: auto;
+        line-height: 30px;
+    }
+
+    .ny_mainlist_search .ny_mainlist_search_icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(../images/search.png) no-repeat center;
+    }
+
+        .ny_mainlist_search .ny_mainlist_search_icon:hover {
+            background: url(../images/search_1.png) no-repeat center;
+        }
+
+.ny_mainlist_list_ul {
+    width: 728px;
+    margin: 10px;
+    margin-top: 0px;
+}
+
+    .ny_mainlist_list_ul li {
+        width: 728px;
+        height: 35px;
+    }
+
+        .ny_mainlist_list_ul li:nth-child(2n-1) {
+            background-color: #E8EFF2;
+        }
+
+        .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a {
+            display: inline-block;
+            height: 35px;
+            width: 100%;
+        }
+
+        .ny_mainlist_list_ul li:hover {
+            background: #CCE4EB;
+        }
+
+
+        .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span {
+            font-size: 13px;
+            height: 35px;
+            line-height: 35px;
+            display: inline-block;
+            padding: 0 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_list_ul_a_tilte {
+                padding-left: 25px;
+                background: url(../images/ny_mainlist_list_ul_point.png) no-repeat 10px center;
+                width: 460px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_list_ul_a_person {
+                width: 120px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_list_ul_a_date {
+                width: 135px;
+                text-align: right;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_application_title {
+                padding-left: 25px;
+                background: url(../images/ny_mainlist_list_ul_point.png) no-repeat 10px center;
+                width: 280px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_application_type {
+                width: 70px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_application_state {
+                width: 145px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_application_per {
+                width: 67px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_application_date {
+                width: 140px;
+                text-align: right;
+            }
+
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_title {
+                width: 225px;
+                background: url(../images/ny_mainlist_list_ul_point.png) no-repeat 10px center;
+                padding-left: 25px;
+            }
+
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_type {
+                width: 70px;
+            }
+
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_state {
+                width: 138px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_arrivetime {
+                width: 100px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_time {
+                width: 100px;
+            }
+
+            .ny_mainlist_list_ul li a.ny_mainlist_list_ul_a span.ny_mainlist_mywork_task_person {
+                width: 70px;
+            }
+
+
+
+.ny_mainlist_list_ul_email {
+    width: 100%;
+    margin: 0px;
+}
+
+    .ny_mainlist_list_ul_email li {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #cecece;
+        background-color: #E8EFF2;
+    }
+
+        .ny_mainlist_list_ul_email li:nth-child(2n) {
+            background-color: #ffffff;
+        }
+
+        .ny_mainlist_list_ul_email li:hover {
+            background: #0B7FC8;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #61D2FB), color-stop(0.66, #0B7FC8));
+            /* chrome 10+, safari 5.1+ */
+            background-image: -webkit-linear-gradient(#61D2FB, #0B7FC8);
+            /* firefox; multiple color stops */
+            background-image: -moz-linear-gradient(top,#61D2FB, #0B7FC8);
+            /* ie 6+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8');
+            /* ie8 + */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8')";
+            /* ie10 */
+            background-image: -ms-linear-gradient(#61D2FB, #0B7FC8);
+            /* opera 11.1 */
+            background-image: -o-linear-gradient(#61D2FB, #0B7FC8);
+            /* 标准写法 */
+            background-image: linear-gradient(#61D2FB, #0B7FC8);
+        }
+
+            .ny_mainlist_list_ul_email li:hover a {
+                color: #ffffff !important;
+            }
+
+        .ny_mainlist_list_ul_email li a.ny_mainlist_list_ul_email_a {
+            display: inline-block;
+            height: 50px;
+            width: 100%;
+            padding: 4px 0;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_email_new {
+            background-image: url(../images/ny_emailnew_icon.png);
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 17px;
+            color: #007A9C;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_email_open {
+            background: url(../images/ny_emailopen_icon.png);
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 17px;
+        }
+
+        .ny_mainlist_list_ul_email li:hover a.ny_email_new {
+            background: url(../images/ny_emailnew_icon2.png);
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 17px;
+        }
+
+        .ny_mainlist_list_ul_email li:hover a.ny_email_open {
+            background: url(../images/ny_emailopen_icon2.png);
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 17px;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_mainlist_list_ul_email_a span {
+            font-size: 13px;
+            height: 21px;
+            line-height: 21px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+
+        .ny_mainlist_list_ul_email li a.ny_mainlist_list_ul_email_a .ny_mainlist_list_ul_email_a_person {
+            width: 70%;
+            padding-left: 60px;
+            font-size: 12px;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_mainlist_list_ul_email_a .ny_mainlist_list_ul_email_a_date {
+            width: 20%;
+            text-align: right;
+            padding-right: 20px;
+            font-size: 12px;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_mainlist_list_ul_email_a .ny_mainlist_list_ul_email_a_title {
+            width: 100%;
+            font-weight: bold;
+            font-size: 15px;
+            padding-left: 60px;
+        }
+
+        .ny_mainlist_list_ul_email li a.ny_email_open span.ny_mainlist_list_ul_email_a_title {
+            color: #888888;
+        }
+
+        .ny_mainlist_list_ul_email li:hover a.ny_email_open span.ny_mainlist_list_ul_email_a_title {
+            color: #ffffff !important;
+        }
+
+
+.ny_mainlist_block {
+    width: 100%;
+}
+
+.ny_mainlist_block_ul_title {
+    width: 100%;
+    height: 40px;
+}
+
+    .ny_mainlist_block_ul_title span {
+        font-size: 13px;
+        margin-top: 20px;
+        display: inline-block;
+        padding: 0 5px;
+        color: #F89021;
+        font-weight: bold;
+    }
+
+        .ny_mainlist_block_ul_title span.ny_mainlist_block_ul_title_title {
+            padding-left: 25px;
+            width: 448px;
+        }
+
+        .ny_mainlist_block_ul_title span.ny_mainlist_block_ul_title_person {
+            padding-left: 25px;
+            width: 120px;
+        }
+
+        .ny_mainlist_block_ul_title span.ny_mainlist_block_ul_title_date {
+            width: 137px;
+            text-align: right;
+        }
+
+
+        .ny_mainlist_block_ul_title span.ul_mywork_application_title {
+            padding-left: 36px;
+            width: 284px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_application_type {
+            padding-left: 10px;
+            width: 75px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_application_state {
+            /* padding-left: 10px; */
+            width: 140px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_application_per {
+            width: 90px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_application_date {
+            width: 120px;
+            /*text-align: right;*/
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_title {
+            width: 233px;
+            padding-left: 20px;
+        }
+
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_type {
+            width: 73px;
+        }
+
+
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_state {
+            width: 135px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_arrivetime {
+            width: 100px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_time {
+            width: 100px;
+        }
+
+        .ny_mainlist_block_ul_title span.ul_mywork_task_person {
+            width: 50px;
+        }
+
+.ny_mainlist_block_ul {
+    width: 100%;
+}
+
+    .ny_mainlist_block_ul li {
+        height: auto;
+        width: 100%;
+        border: 1px solid rgba(234, 227, 245, 0.00);
+        border-bottom: 1px solid #EAE3F5;
+        background-color: #ffffff;
+    }
+
+        .ny_mainlist_block_ul li:hover {
+            border: 1px solid #007A9C;
+        }
+
+            .ny_mainlist_block_ul li:hover .ny_mainlist_block_con a {
+                color: #2A6496;
+            }
+
+.ny_mainlist_block_pic {
+    width: 175px;
+    height: 130px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+    .ny_mainlist_block_pic span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        display: block;
+        width: 70px;
+        height: 25px;
+        font-size: 13px;
+        line-height: 25px;
+        background-color: #e48535;
+        filter: alpha(opacity=80); /*IE滤镜，透明度50%*/
+        -moz-opacity: 0.8; /*Firefox私有，透明度50%*/
+        opacity: 0.8; /*其他，透明度50%*/
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .ny_mainlist_block_pic img {
+        display: block;
+        width: 165px;
+        height: 120px;
+        margin: 5px;
+        border: 1px solid #007A9C;
+    }
+
+.ny_mainlist_block_con {
+    float: right;
+    width: 558px;
+    padding: 10px;
+}
+
+    .ny_mainlist_block_con a {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+.ny_mainlist_block_con_time {
+    width: 60%;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.ny_mainlist_block_con_number {
+    width: 40%;
+    margin-top: 27px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.ny_mainlist_block_con_number_nomar {
+    width: 40%;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.ny_mainlist_block_con_info {
+    width: 100%;
+    height: 33px;
+    margin-top: 10px;
+    overflow: hidden;
+    font-size: 12px;
+    text-indent: 2em;
+}
+
+.ny_mainlist_block_con_info_nomar {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    overflow: hidden;
+    font-size: 12px;
+    text-indent: 2em;
+}
+
+.ny_mainlist_block_con_info_online {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+    .ny_mainlist_block_con_info_online span {
+        display: inline-block;
+    }
+
+        .ny_mainlist_block_con_info_online span.ny_mainlist_block_con_info_online_no {
+        }
+
+        .ny_mainlist_block_con_info_online span.ny_mainlist_block_con_info_online_sel {
+            line-height: 12px;
+            margin-right: 20px;
+            width: 365px;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+        .ny_mainlist_block_con_info_online span.ny_mainlist_block_con_info_online_num {
+            font-weight: normal;
+        }
+
+.ny_mainlist_block_con_info_online_top1 {
+    width: 100%;
+    color: red;
+    font-weight: bold;
+}
+
+.ny_mainlist_block_con_number_orange {
+    color: #F89021;
+    font-weight: bold;
+}
+
+.ny_progressbar {
+    height: 60px;
+    padding: 10px;
+    padding-top: 15px;
+    background-color: #BCDCF0;
+}
+
+.ny_progressbar_title {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+    .ny_progressbar_title li {
+        height: 30px !important;
+        width: 70px !important;
+        border-bottom: none !important;
+        background: none !important;
+    }
+
+        .ny_progressbar_title li:hover {
+            border: none !important;
+        }
+
+.progress {
+    height: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.progress-bar-info {
+    background-color: #007A9C !important;
+}
+
+.ny_progressbar_title3 {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+    .ny_progressbar_title3 li:first-child {
+        display: block;
+    }
+
+    .ny_progressbar_title3 li:nth-child(2) {
+        display: block;
+        margin-left: 33%;
+    }
+
+    .ny_progressbar_title3 li:last-child {
+        display: block;
+        text-align: right;
+    }
+
+    .ny_progressbar_title3 li.active {
+        color: #000000;
+    }
+
+
+.ny_detail_abstract {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.ny_detail_abstract_pic {
+    width: 320px;
+    height: 244px;
+    float: left;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .ny_detail_abstract_pic img {
+        display: block;
+        width: 280px;
+        height: 204px;
+        border: 1px solid #007A9C;
+    }
+
+    .ny_detail_abstract_pic span {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: block;
+        width: 70px;
+        height: 25px;
+        font-size: 13px;
+        line-height: 25px;
+        background-color: #e48535;
+        filter: alpha(opacity=80); /*IE滤镜，透明度50%*/
+        -moz-opacity: 0.8; /*Firefox私有，透明度50%*/
+        opacity: 0.8; /*其他，透明度50%*/
+        color: #ffffff;
+        text-align: center;
+    }
+
+
+.ny_detail_abstract_con, .ny_detail_abstract_con_nomar {
+    height: 244px;
+    float: right;
+    width: 427px;
+    padding: 20px 20px 20px 0;
+}
+
+    .ny_detail_abstract_con_nomar span {
+        max-height: 80px !important;
+        margin-top: 20px;
+    }
+
+
+    .ny_detail_abstract_con span, .ny_detail_abstract_con_nomar span {
+        display: block;
+        line-height: 20px;
+        max-height: 60px;
+        overflow: hidden;
+        font-size: 12px;
+    }
+
+.ny_detail_abstract_con_title {
+    font-size: 18px !important;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0px !important;
+}
+
+.ny_normal_btn {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 70px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #E0E0E0;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #E0E0E0), color-stop(0.66, #eeeeee));
+    background-image: -webkit-linear-gradient(#E0E0E0, #eeeeee);
+    background-image: -moz-linear-gradient(top,#E0E0E0, #eeeeee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#eeeeee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#eeeeee')";
+    background-image: -ms-linear-gradient(#E0E0E0, #eeeeee);
+    background-image: -o-linear-gradient(#E0E0E0, #eeeeee);
+    background-image: linear-gradient(#E0E0E0, #eeeeee);
+    border: 1px solid #B3B3B3;
+    color: #656565;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -35px;
+    left: 40%;
+}
+
+.ny_detail_abstract_btn {
+    padding: 0 !important;
+    margin-top: 10px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #F6AE61;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #F6AE61), color-stop(0.66, #F89021));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#F6AE61, #F89021);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#F6AE61, #F89021);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6AE61', endColorstr='#F89021');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F6AE61', endColorstr='#F89021')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#F6AE61, #F89021);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#F6AE61, #F89021);
+    /* 标准写法 */
+    background-image: linear-gradient(#F6AE61, #F89021);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #F89021;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.ny_btn_forbid {
+    background: #E0E0E0;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #E0E0E0), color-stop(0.66, #eeeeee));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#E0E0E0, #eeeeee);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#E0E0E0, #eeeeee);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#eeeeee');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#eeeeee')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#E0E0E0, #eeeeee);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#E0E0E0, #eeeeee);
+    /* 标准写法 */
+    background-image: linear-gradient(#E0E0E0, #eeeeee);
+    border: 1px solid #B3B3B3;
+    overflow: hidden;
+    color: #656565;
+}
+
+    .ny_btn_forbid:hover {
+        color: #555555 !important;
+        opacity: 1 !important;
+        cursor: default;
+    }
+
+.ny_btn_completed {
+    background: #61D2FB;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #61D2FB), color-stop(0.66, #0B7FC8));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#61D2FB, #0B7FC8);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#61D2FB, #0B7FC8);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#61D2FB, #0B7FC8);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#61D2FB, #0B7FC8);
+    /* 标准写法 */
+    background-image: linear-gradient(#61D2FB, #0B7FC8);
+    border: 1px solid #B3B3B3;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+    .ny_btn_completed:hover {
+        color: #fff !important;
+        opacity: 1 !important;
+        cursor: default;
+    }
+
+.ny_detail_abstract_num {
+    display: block;
+    height: 50px;
+    line-height: 63px !important;
+    width: 200px !important;
+    float: left;
+    padding-top: 0 !important;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.ny_detail_abstract_btn:hover {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+
+.ny_detail_abstract_tabs {
+    background-color: #ffffff;
+    border-bottom: 1px solid #B7B7B7;
+    height: 35px;
+    margin: auto 20px;
+}
+
+    .ny_detail_abstract_tabs ul {
+        width: 100%;
+    }
+
+        .ny_detail_abstract_tabs ul li {
+            width: 80px;
+            height: 35px !important;
+            line-height: 35px;
+            float: left;
+            text-align: center;
+            -webkit-border-top-left-radius: 10px;
+            border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+            margin-right: 2px;
+            border: 1px solid #B7B7B7;
+            background: #f3f3f3;
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #FDFDFD), color-stop(0.66, #f3f3f3));
+            /* chrome 10+, safari 5.1+ */
+            background-image: -webkit-linear-gradient(#FDFDFD, #f3f3f3);
+            /* firefox; multiple color stops */
+            background-image: -moz-linear-gradient(top,#FDFDFD, #f3f3f3);
+            /* ie 6+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDFDFD', endColorstr='#f3f3f3');
+            /* ie8 + */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDFDFD', endColorstr='#f3f3f3')";
+            /* ie10 */
+            background-image: -ms-linear-gradient(#FDFDFD, #f3f3f3);
+            /* opera 11.1 */
+            background-image: -o-linear-gradient(#FDFDFD, #f3f3f3);
+            /* 标准写法 */
+            background-image: linear-gradient(#FDFDFD, #f3f3f3);
+        }
+
+            .ny_detail_abstract_tabs ul li:hover, .ny_detail_abstract_tabs ul li.active {
+                border: 1px solid #B7B7B7;
+                border-bottom: 1px solid #ffffff;
+                background: #ffffff;
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #ffffff), color-stop(0.66, #ffffff));
+                /* chrome 10+, safari 5.1+ */
+                background-image: -webkit-linear-gradient(#ffffff, #ffffff);
+                /* firefox; multiple color stops */
+                background-image: -moz-linear-gradient(top,#ffffff, #ffffff);
+                /* ie 6+ */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff');
+                /* ie8 + */
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff')";
+                /* ie10 */
+                background-image: -ms-linear-gradient(#ffffff, #ffffff);
+                /* opera 11.1 */
+                background-image: -o-linear-gradient(#ffffff, #ffffff);
+                /* 标准写法 */
+                background-image: linear-gradient(#ffffff, #ffffff);
+            }
+
+
+
+            .ny_detail_abstract_tabs ul li:hover {
+                opacity: 0.6;
+            }
+
+                .ny_detail_abstract_tabs ul li:hover a, .ny_detail_abstract_tabs ul li.active a {
+                    color: #007A9C;
+                    font-weight: bold;
+                }
+
+            .ny_detail_abstract_tabs ul li a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+.ny_detail_abstract_tabscon {
+    padding: 20px;
+    line-height: 25px;
+}
+
+    .ny_detail_abstract_tabscon p, .ny_detail_abstract_tabscon div, .ny_detail_abstract_tabscon span {
+        text-align: left;
+    }
+
+    .ny_detail_abstract_tabscon img {
+        max-width: 700px !important;
+    }
+
+.ny_detail_abstract_table {
+    width: 100%;
+}
+
+    .ny_detail_abstract_table tr th {
+        border-bottom: 1px solid #575757;
+        background-color: #EAEAEA;
+        padding-left: 5px;
+    }
+
+    .ny_detail_abstract_table tr td {
+        padding-left: 5px;
+    }
+
+
+.ny_mainlist_info {
+    width: 100%;
+    padding: 20px;
+}
+
+.ny_mainlist_namedate {
+    width: 100%;
+    text-align: center;
+}
+
+    .ny_mainlist_namedate span {
+        line-height: 26px;
+        padding: 10px 0px;
+        color: #666666;
+    }
+
+        .ny_mainlist_namedate span.ny_mainlist_nametitle_span {
+            padding: 10px 10px;
+            font-size: 12px;
+        }
+
+.ny_mainlist_nametitle {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #000000 !important;
+    font-weight: bold;
+    padding-top: 0px !important;
+}
+
+.ny_mainlist_nametitle_share {
+    display: none;
+    color: #666666;
+    padding-top: 5px;
+    position: relative;
+}
+
+.ny_mainlist_nametitle_share_icon {
+    position: absolute;
+    top: 6px;
+    left: -12px;
+    width: 16px;
+    height: 16px;
+}
+
+.ny_mainlist_nametitle_good, .ny_mainlist_nametitle_cancelgood {
+    height: 18px;
+    padding-right: 23px;
+    color: #666666;
+    padding-top: 4px;
+    position: relative;
+    font-size: 12px;
+    text-align: right;
+}
+
+.ny_mainlist_nametitle_good {
+    background: url(../images/ny_good_icon.png) no-repeat right center;
+}
+
+.ny_mainlist_nametitle_cancelgood {
+    background: url(../images/ny_good_icon2.png) no-repeat right center;
+}
+
+.ny_mainlist_detailtext {
+    line-height: 25px;
+}
+
+    .ny_mainlist_detailtext p {
+        /*width: 100%;*/
+        text-align: left;
+        margin-top: 10px;
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .ny_mainlist_detailtext img {
+        max-width: 700px;
+        height: auto;
+    }
+
+    .ny_mainlist_detailtext table {
+        margin: 0 auto;
+    }
+
+.ny_attachmentlist_title {
+    display: block;
+    line-height: 25px;
+    font-size: 13px;
+    color: #3F3F3F;
+    font-weight: bold;
+}
+
+.ny_attachmentlist {
+    margin-top: 10px;
+    border-top: 1px dashed #CACACA;
+    padding-top: 10px;
+}
+
+    .ny_attachmentlist li {
+        margin-left: 20px;
+        list-style-type: disc;
+    }
+
+    .ny_attachmentlist a {
+        color: #555555;
+        line-height: 23px;
+    }
+
+        .ny_attachmentlist a:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+.ny_online_select_list {
+    width: 100%;
+}
+
+    .ny_online_select_list li {
+        height: 30px !important;
+        border: 0px !important;
+    }
+
+        .ny_online_select_list li:hover {
+            border: 0px !important;
+        }
+
+.ny_online_no1 {
+    background: url(../images/ny_online_no1.png) no-repeat;
+    padding-left: 40px;
+}
+
+.ny_online_select {
+    width: 60%;
+    padding-left: 10px;
+}
+
+    .ny_online_select span {
+        display: block;
+        height: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+.ny_online_num {
+    width: 40%;
+    height: 30px;
+}
+
+.ny_online_progress {
+    margin: 10px 0px;
+    width: 60%;
+}
+
+.ny_online_progress_num {
+    display: block;
+    width: 110px;
+}
+
+.ny_ny_mainlist_calendar_select {
+    width: 210px;
+    height: 30px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.ny_ny_mainlist_calendar_select_btn {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    width: 40px;
+    line-height: 30px;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    background: #f3f3f3;
+    color: #007AA8;
+    font-weight: bold;
+}
+
+.ny_ny_mainlist_calendar_select .btn_prev {
+    top: 0px;
+    left: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.ny_ny_mainlist_calendar_select .btn_next {
+    top: 0px;
+    left: 170px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.ny_ny_mainlist_calendar_select_input {
+    position: relative;
+    top: 0;
+    left: 40px;
+    border-radius: 0px;
+    margin: 0px;
+    height: 30px;
+    line-height: 20px;
+    padding: 3px 10px;
+    width: 130px;
+    text-align: center;
+}
+
+.ny_ny_mainlist_calendar_select_btn:hover {
+    border-color: #aaaaaa;
+    color: #F89021;
+    background: #E8EFF2;
+}
+
+.ny_ny_mainlist_calendar_block {
+    width: 100%;
+    height: auto;
+}
+
+.ny_ny_mainlist_calendar_title {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.ny_ny_mainlist_calendar_title_day {
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 21px;
+    color: #F89021;
+    font-weight: bold;
+    background-color: #E8EFF2;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    -moz-box-shadow: 0 -2px 5px #C1C6C7;
+    -webkit-box-shadow: 0 -2px 5px #C1C6C7;
+    box-shadow: 0 -2px 5px #C1C6C7;
+    border: 1px solid #C1C6C7;
+    border-bottom: 0px;
+}
+
+.ny_ny_mainlist_calendar_title_week {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+}
+
+.ny_ny_mainlist_calendar_title_month {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+.ny_ny_mainlist_calendar_ul {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    -moz-box-shadow: 0 0px 5px #C1C6C7;
+    -webkit-box-shadow: 0 0px 5px #C1C6C7;
+    box-shadow: 0 0px 5px #C1C6C7;
+    border-top: 1px solid #C1C6C7;
+    border-bottom: 1px solid #C1C6C7;
+}
+
+    .ny_ny_mainlist_calendar_ul li {
+        width: 100%;
+        height: 30px;
+        background-color: #E8EFF2;
+    }
+
+        .ny_ny_mainlist_calendar_ul li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 5px 20px;
+        }
+
+            .ny_ny_mainlist_calendar_ul li a:hover {
+                color: #ffffff !important;
+                background: #0B7FC8;
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #61D2FB), color-stop(0.66, #0B7FC8));
+                /* chrome 10+, safari 5.1+ */
+                background-image: -webkit-linear-gradient(#61D2FB, #0B7FC8);
+                /* firefox; multiple color stops */
+                background-image: -moz-linear-gradient(top,#61D2FB, #0B7FC8);
+                /* ie 6+ */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8');
+                /* ie8 + */
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#61D2FB', endColorstr='#0B7FC8')";
+                /* ie10 */
+                background-image: -ms-linear-gradient(#61D2FB, #0B7FC8);
+                /* opera 11.1 */
+                background-image: -o-linear-gradient(#61D2FB, #0B7FC8);
+                /* 标准写法 */
+                background-image: linear-gradient(#61D2FB, #0B7FC8);
+            }
+
+            .ny_ny_mainlist_calendar_ul li a span {
+                display: inline-block;
+                height: 100%;
+                line-height: 20px;
+            }
+
+            .ny_ny_mainlist_calendar_ul li a:hover span {
+                color: #ffffff;
+            }
+
+.ny_ny_mainlist_calendar_ul_time {
+    width: 20%;
+    color: #007A9C;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.ny_ny_mainlist_calendar_ul_title {
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.ny_ny_mainlist_calendar_ul_address {
+    width: 38%;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.ny_ny_mainlist_calendar_nodate {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    background-color: #E8EFF2;
+    padding: 5px 20px;
+    text-align: center;
+    -moz-box-shadow: 0 0px 23px #C1C6C7;
+    -webkit-box-shadow: 0 0px 23px #C1C6C7;
+    box-shadow: 0 0px 23px #C1C6C7;
+    border-top: 1px solid #C1C6C7;
+    border-bottom: 1px solid #C1C6C7;
+    color: #777777;
+}
+
+.ny_mainlist_block_service_ul {
+    width: 100%;
+    padding: 10px;
+}
+
+    .ny_mainlist_block_service_ul li {
+        width: 120px;
+        height: 100px;
+        float: left;
+        padding: 10px;
+    }
+
+.ny_mainlist_block_service_ul_a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ny_mainlist_block_service_ul_img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+
+.ny_mainlist_block_service_ul_span {
+    display: block;
+    width: 100%;
+    line-height: 15px;
+    text-align: center;
+}
+
+.ny_mainlist_block_service_ul_a:hover .ny_mainlist_block_service_ul_img {
+    -moz-box-shadow: 0 0 10px #007A9C;
+    -webkit-box-shadow: 0 0 10px #007A9C;
+    box-shadow: 0 0 10px #007A9C;
+}
+
+.ny_mainlist_block_service_ul_a:hover .ny_mainlist_block_service_ul_span {
+    color: #007A9C;
+}
+
+.service_form_title {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    font-size: 21px;
+    text-align: center;
+    color: #007A9C;
+    font-weight: bold;
+}
+
+.service_form_number {
+    display: block;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    color: #555555;
+    padding-left: 20px;
+}
+
+.service_form_table {
+    width: 708px;
+    margin: 0 auto;
+    border: 1px solid #555555;
+    margin-bottom: 20px;
+}
+
+    .service_form_table tr td {
+        line-height: 35px;
+        padding: 0 5px 0 10px;
+    }
+
+.ny_service_form_submit {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #8da8ba;
+    color: #ffffff;
+    background: #007A9C;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+    .ny_service_form_submit:hover {
+        color: #007A9C;
+        background-color: #e1e1e1;
+    }
+
+.ny_mainlist_search_mywork {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    background-color: #f3f3f3;
+    margin: 20px 20px 0 20px;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.ny_adressbook_left {
+    width: 250px !important;
+    margin: 20px;
+    margin-right: 0px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.ny_adressbook_left_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    border: 1px solid #CDCDCD;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    .ny_adressbook_right padding: 0px;
+    overflow: auto;
+}
+
+.ny_adressbook_right {
+    width: 437px !important;
+    height: 100%;
+    margin: 20px;
+}
+
+
+
+
+.company_ztree li {
+    /*height: 22px;*/
+    line-height: 22px;
+}
+
+.company_ztree a {
+    height: 22px !important;
+}
+
+.ny_adressbook_right_search {
+    height: 10%;
+    max-height: 40px;
+}
+
+.ny_adressbook_right_list {
+    height: 100%;
+    width: 100%;
+}
+
+.ny_adressbook_ul {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.ny_adressbook_ul_li {
+    float: left;
+    width: 100%;
+    height: 85px;
+    position: relative;
+}
+
+
+
+    .ny_adressbook_ul_li a {
+        cursor: pointer;
+        color: #000000;
+    }
+
+        .ny_adressbook_ul_li a:hover {
+            color: #316D9F;
+        }
+
+
+
+
+.ny_adressbook_ul_a_img {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /*border: 1px solid #cecece;*/
+}
+
+.ny_adressbook_ul_a_div {
+    position: absolute;
+    top: 0px;
+    left: 95px;
+    width: 340px;
+    height: 73px;
+    font-size: 12px;
+}
+
+    .ny_adressbook_ul_a_div span {
+        display: block;
+        width: 100%;
+        height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+
+.ny_adressbook_ul_a_div_name {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0px;
+    line-height: 20px;
+    float: left;
+}
+
+.ny_adressbook_ul_a_div_job {
+    float: left;
+    width: auto !important;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.ny_adressbook_ul_a_div_dept {
+    padding: 0px;
+}
+
+
+.ny_adressbook_ul_a_div_email {
+    float: left;
+    width: 100% !important;
+    background: url(/Scripts/images/ny_address_email_16.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+.ny_adressbook_ul_a_div_ophone {
+    float: left;
+    width: 70% !important;
+    background: url(/Scripts/images/ny_address_mphone_16.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+.ny_adressbook_ul_a_div_mphone {
+    float: left;
+    width: 30% !important;
+    background: url(/Scripts/images/ny_address_ophone_16.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+.ny_adressbook_ul_a_state {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 80px;
+    border: 1px solid #CECECE;
+    border-right: 0px;
+}
+
+.state_yellow {
+    background-color: #FFD200;
+}
+
+.state_white {
+    background-color: #ffffff;
+}
+
+.state_green {
+    background-color: #5DD255;
+}
+
+.state_blue {
+    background-color: #B6CFD8;
+}
+
+.ny_adressbook_ul_li_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 315px;
+    z-index: 300;
+    background: #ffffff;
+}
+
+
+.ny_adressbook_ul_li_info_img {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    width: 78px;
+    height: 78px;
+}
+
+.ny_adressbook_ul_li_info_state {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 8px;
+    height: 78px;
+    border: 1px solid #CECECE;
+    border-right: 0px;
+}
+
+.ny_adressbook_ul_li_info_nameinfo {
+    position: absolute;
+    top: 20px;
+    left: 135px;
+    height: 78px;
+    width: 140px;
+}
+
+    .ny_adressbook_ul_li_info_nameinfo span {
+        display: block;
+        font-weight: bold;
+    }
+
+.btn_address_close_div {
+    position: absolute;
+    bottom: 0px;
+    left: 143px;
+    width: 70px;
+    text-align: center;
+}
+
+
+
+.ny_adressbook_ul_li_info_bg {
+    position: absolute;
+    top: 105px;
+    left: 10px;
+    width: 90%;
+    height: 80px;
+    padding: 15px;
+    background: #fefefe;
+    margin-left: 8px;
+}
+
+    .ny_adressbook_ul_li_info_bg span {
+        float: left;
+        display: block;
+        width: 48%;
+        line-height: 23px;
+        font-size: 13px;
+    }
+
+.ny_adressbook_ul_li_more {
+    position: absolute;
+    top: 105px;
+    left: 30px;
+}
+
+    .ny_adressbook_ul_li_more span {
+        display: block;
+        width: 100%;
+        line-height: 23px;
+        font-size: 13px;
+    }
+
+.editdiv_table {
+    width: 100%;
+}
+
+    .editdiv_table tr td {
+        line-height: 35px;
+    }
+
+        .editdiv_table tr td.first {
+            text-align: right;
+            width: 33%;
+            padding-right: 10px;
+        }
+
+.ny_business_ul {
+    width: 100%;
+    padding: 20px 0;
+}
+
+    .ny_business_ul li {
+        width: 165px;
+        height: 100px;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+        .ny_business_ul li img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid #fff;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+        }
+
+        .ny_business_ul li span {
+            display: block;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .ny_business_ul li:hover img {
+            border: 1px solid #bbb;
+            box-shadow: 0 0 20px #bbb;
+        }
+
+        .ny_business_ul li:hover span {
+            color: #007A9C;
+        }
+
+.report_topdiv {
+    padding: 5px 20px;
+    border: 1px solid #007A9C;
+    background-color: #fff;
+    position: fixed;
+    top: 50px;
+    left: 1%;
+    right: 1%;
+}
+
+.report_teblediv {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0px;
+    /*overflow: auto;*/
+}
+
+.report_tbale {
+    width: 100%;
+    border: 1px solid #bbbbbb;
+}
+
+    .report_tbale th {
+        font-size: 13px;
+        line-height: 16px;
+        border-bottom: 1px solid #bbbbbb;
+        background-color: #007A9C;
+        color: #ffffff;
+        height: 35px;
+    }
+
+    .report_tbale th, .report_tbale td {
+        padding: 0 2px;
+    }
+
+    .report_tbale tr {
+        background-color: #fff;
+    }
+
+        .report_tbale tr td {
+            border-bottom: 1px solid #e3e3e3;
+            -ms-word-break: break-all;
+            word-break: break-all;
+        }
+
+    .report_tbale td.numbers {
+        text-align: right;
+    }
+
+.report_title_div {
+    width: 100%;
+    text-align: center;
+}
+
+    .report_title_div span {
+        display: inline-block;
+        height: 40px;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px auto 0;
+        color: #007A9C;
+    }
+
+.report_teblediv_overflow {
+}
+
+.onlineadd_title {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #007A9C;
+    margin-bottom: 10px;
+}
+
+
+.onlineadd_select_list {
+    width: 100%;
+    padding: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #f3f3f3;
+    border: 1px solid #b2b2b2;
+}
+
+    .onlineadd_select_list li {
+        height: 30px !important;
+        border: 0px !important;
+    }
+
+        .onlineadd_select_list li:hover {
+            border: 0px !important;
+        }
+
+#txtOrderNum {
+    width: 125px;
+}
+
+#txtBeginDate, #txtEndDate {
+    width: 110px;
+}
+
+#txtSaleName, #txtSalesManAccount {
+    width: 100px;
+}
+
+#txtDeptName, #txtDeliveryUnit {
+    width: 150px;
+}
+
+
+.rc_pager {
+    text-align: left !important;
+    background: none !important;
+}
+
+.ny_container_block_icon_number {
+    position: absolute;
+    top: 30px;
+    right: 42px;
+    width: 24px;
+    height: 24px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 12px;
+    background: #F89021;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    -moz-box-shadow: 0 0 20px #424242;
+    -webkit-box-shadow: 0 0 20px #424242;
+    box-shadow: 0 0 20px #424242;
+    line-height: 21px;
+}
+
+.ms-webpart-zone {
+    background-color: #fff !important;
+}
+
+table tr th.ms-vh {
+    width: 200px !important;
+}
+
+table tr th.ms-vh2 {
+    width: 300px !important;
+}
+
+#s4-workspace {
+    background: #fff;
+}
+
+.home_footer_top_text_setting {
+    display: inline-block;
+    font-family: 'Microsoft YaHei';
+    text-align: center;
+    font-size: 12px;
+    height: 90px;
+    width: 100%;
+    padding-top: 8px;
+    margin: 0px;
+    color: #3C3E3E;
+    text-decoration: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    position: relative;
+}
+
+    .home_footer_top_text_setting img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 7px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #dddddd;
+    }
+
+.home_footer_top_icon_group .home_footer_top_text:hover, .home_footer_top_icon_group .home_footer_top_text:focus {
+    color: #254269;
+    font-weight: bold;
+    text-shadow: 0 2px 10px #ffffff;
+    text-decoration: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    cursor: pointer;
+}
+
+.home_footer_top_text_name {
+    display: inline-block;
+    height: 30px;
+    width: 78px;
+    /*padding-top: 63px;*/
+    font-family: 'Microsoft YaHei';
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+    .home_footer_top_text_name:hover, .home_footer_top_text_name:focus {
+        color: #254269;
+        font-weight: bold;
+        text-shadow: 0 2px 10px #ffffff;
+        text-decoration: none;
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+        cursor: move;
+    }
+
+
+.radius15_bg {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #CECECE;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    -moz-box-shadow: 0px 0px 4px #E2E2E2;
+    -webkit-box-shadow: 0px 0px 4px #E2E2E2;
+    box-shadow: 0px 0px 4px #E2E2E2;
+}
+
+.btn_work {
+    width: 100%;
+    /*margin-right:5px;*/
+    padding: 3px 15px;
+    background-color: #fff;
+    color: #009BDF;
+    font-weight: bold;
+    font-size: 14px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#f1f1f1); /*IE 6 7 8*/
+    background: -ms-linear-gradient(top, #ffffff, #f1f1f1); /* IE 10 */
+    background: -moz-linear-gradient(top,#FCFCFC,#f1f1f1); /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#fff), to(#f1f1f1)); /*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f1f1f1)); /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #fff, #f1f1f1); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #fff, #f1f1f1); /*Opera 11.10+*/
+}
+
+    .btn_work:hover, .btn_work:focus, .btn_work:active {
+        text-decoration: none;
+        border-color: #009BDF;
+        background-color: #FDFDFD;
+        FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#DBDBDB,endColorStr=#FDFDFD); /*IE 6 7 8*/
+        background: -ms-linear-gradient(top, #DBDBDB, #FDFDFD); /* IE 10 */
+        background: -moz-linear-gradient(top,#DBDBDB,#FDFDFD); /*火狐*/
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#DBDBDB), to(#FDFDFD)); /*谷歌*/
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DBDBDB), to(#FDFDFD)); /* Safari 4-5, Chrome 1-9*/
+        background: -webkit-linear-gradient(top, #DBDBDB, #FDFDFD); /*Safari5.1 Chrome 10+*/
+        background: -o-linear-gradient(top, #DBDBDB, #FDFDFD); /*Opera 11.10+*/
+    }

@@ -1,0 +1,374 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NYBaseLayout.Master.cs" Inherits="DZAFCPortal.Web.Client.NYBaseLayout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>东正内网门户</title>
+    <link href="/Scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Scripts/Client/css/base.css" rel="stylesheet" />
+    <link href="/Scripts/Client/css/layouts.css" rel="stylesheet" />
+    <link href="/Scripts/Client/css/flickerplate.css" rel="stylesheet" />
+    <link href="/Scripts/Client/css/pagenavi.css" rel="stylesheet" />
+    <link href="/Scripts/Client/css/jqpager.css" rel="stylesheet" />
+    <link href="/Scripts/Client/ThirdLibs/layer/skin/layer.css" rel="stylesheet" />
+
+    <script src="/Scripts/jquery/jquery-1.11.1.js"></script>
+    <script src="/Scripts/jquery/jquery-migrate-1.2.1.js"></script>
+    <script src="/Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Scripts/Client/js/flickerplate.min.js"></script>
+    <script src="/Scripts/Client/js/clientCommon.js"></script>
+
+    <script src="/Scripts/Client/ThirdLibs/layer/layer.min.js"></script>
+
+    <script src="/Scripts/Client/ThirdLibs/knockout-3.2.0.js"></script>
+    <script src="/Scripts/Client/ThirdLibs/moment.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="overlay2"></div>
+    <form id="form1" runat="server">
+        <div class="ny_right_block ny_right_block_20" id="Content_link">
+            <div class="ny_right_block_bg ny_boxshadow ny_right_block_bg_right300">
+                <a class="ny_right_block_open_icon ny_change_icon"></a>
+                <span class="ny_right_block_title">常用链接</span>
+                <a>
+                    <img src="/Scripts/Client/images/ny_right_setting.png" class="ny_right_setting_icon" onclick="showUserConfigLayer();" />
+                </a>
+                <ul class="ny_right_block_ul" data-bind="visible: currentlinkApp.links().length > 0, foreach: currentlinkApp.links">
+                    <li>
+                        <a data-bind=" attr: { href: Url, title: Name }" target="_blank">
+                            <img data-bind=" attr: { src: Icon }" class="ny_right_block_ul_icon" />
+                            <span class="ny_right_block_ul_title" data-bind=" text: Name"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ny_header">
+            <div class="ny_header_info">
+                <div class="ny_header_info_div">
+                    <img src="" alt="" class="ny_header_info_logo fl" />
+                    <div class="ny_header_info_person fr">
+                        <span class="ny_header_info_person_name"><%=CurrentUser.DisplayName %></span>
+                        <input type="hidden" id="hidloginaccount" value="<%=CurrentUser.Account %>" />
+                        <a class="ny_header_info_person_setting">设置<img src="/Scripts/Client/images/ny_header_person_arrow.png" alt="" /></a>
+                        <asp:Image ID="imgUser" runat="server" CssClass="ny_header_info_person_pic" />
+                        <div class="ny_header_info_person_setting_div" style="display: none;">
+                            <ul class="ny_header_info_person_setting_div_ul">
+                                <%--  <li><a href="javascript:void(0);" onclick="OpenEditUserInfo()">修改个人信息</a></li>--%>
+                                <%-- <li><a href="javascript:void(0);"  onclick="OpenEditPasswordInfo()">修改密码</a></li>--%>
+                                <li><a href="javascript:void(0);" onclick="switchDifferentUser();">注销</a></li>
+                                <asp:Label runat="server" ID="AdminAccess">
+                                    <li class="divide">
+                                        <a href='<%= DZAFCPortal.Config.Base.AdminBasePath + "/Admin/Main.aspx"%>' target="_blank">后台管理中心
+                                        </a>
+                                    </li>
+                                </asp:Label>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ny_header_uldiv">
+                <ul class="ny_header_ul">
+                    <!-- 选中状态：在li中加上class="active" -->
+                    <li class="ny_header_ul_li active"><a href='<%=DZAFCPortal.Web.Client.Utils.FormatUrl("/Index.aspx") %>'>首页</a></li>
+                    <asp:Repeater ID="rptNavigator" runat="server" OnItemDataBound="rptNavigator_ItemDataBound">
+                        <ItemTemplate>
+                            <li id='<%#Eval("ID") %>' class="ny_header_ul_li"><a href='<%#GetTopSecondaryUrl(Eval("ID").ToString()) %>'><%#Eval("Title") %></a>
+                                <ul class="ny_header_ulsub" style="display: none;">
+                                    <asp:Repeater runat="server" ID="rptChildNav">
+                                        <ItemTemplate>
+                                            <li>
+                                                <%--  <a href='<%#GetSecondaryUrl(Eval("ID").ToString(),Eval("ParentID").ToString()) %>'>--%>
+                                                <a href='<%#GetSecondaryUrl(Eval("ID").ToString(),Eval("ParentId").ToString(),Eval("Url").ToString()) %>' target="<%#((bool)Eval("IsOpenedNewTab"))?"_blank":"_self" %>">
+                                                    <%#   DZAFCPortal.Utility.StringExt.CutString(Eval("Title").ToString(),12) %>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </ul>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div class="clear"></div>
+        <div class="ny_footer">
+            <div class="ny_footer_block">
+                <img src="" class="ny_container_leftul_bg" />
+                <span class="fl" id="spanFooter">Copyright 2019  东征汽车金融股份有限公司</span>
+                <asp:HyperLink ID="hylAdmin" Target="_blank" CssClass="ny_footer_enter fr" runat="server">后台管理中心</asp:HyperLink>
+            </div>
+        </div>
+    </form>
+    <script>
+        $(function () {
+            $("#spanFooter").html('Copyright ' + moment().format('YYYY') + '  东征汽车金融股份有限公司')
+
+            var temprand = parseInt(3 * Math.random());
+            path = "/Scripts/Client/images/ny_container_leftul_bg" + temprand + ".png";
+            $(".ny_container_leftul_bg").attr("src", path);
+
+
+            $(".ny_header_info_person_setting").click(function (e) {
+
+                if (e.target == this) {
+                    e.stopPropagation();
+                    $(".ny_header_info_person_setting_div").fadeToggle(180);
+                    $("#overlay").fadeToggle(180);
+                }
+
+            });
+            $('#overlay').click(function () {
+                $(".ny_header_info_person_setting_div").hide();
+                $("#overlay").hide();
+            });
+
+
+            $(".ny_change_icon").click(function (e) {
+                if (e.target == this) {
+                    e.stopPropagation();
+                    if ($(this).hasClass("ny_right_block_close_icon")) {
+
+                        $(this).removeClass("ny_right_block_close_icon");
+                        $(".ny_right_block_bg").removeClass("ny_right_block_bg_right20");
+                        $(this).addClass("ny_right_block_open_icon");
+                        $(".ny_right_block_bg").addClass("ny_right_block_bg_right300");
+                        $(".ny_right_block").addClass("ny_right_block_20");
+
+                    }
+                    else {
+                        $(this).removeClass("ny_right_block_open_icon");
+                        $(".ny_right_block_bg").removeClass("ny_right_block_bg_right300");
+                        $(this).addClass("ny_right_block_close_icon");
+                        $(".ny_right_block_bg").addClass("ny_right_block_bg_right20");
+                        $(".ny_right_block").removeClass("ny_right_block_20");
+
+                    }
+
+                    $("#overlay2").fadeToggle();
+                }
+
+            });
+
+            $('#overlay2').click(function () {
+                $(".ny_change_icon").removeClass("ny_right_block_close_icon");
+                $(".ny_right_block_bg").removeClass("ny_right_block_bg_right20");
+                $(".ny_change_icon").addClass("ny_right_block_open_icon");
+                $(".ny_right_block_bg").addClass("ny_right_block_bg_right300");
+                $(".ny_right_block").addClass("ny_right_block_20");
+
+                $("#overlay2").hide();
+            });
+
+            $('.ny_header_ul>.ny_header_ul_li').mouseenter(function () {
+                $(this).find('.ny_header_ulsub').stop(false, true).slideDown(180);
+            }).mouseleave(function () {
+                $(this).find('.ny_header_ulsub').stop(false, true).slideUp(180);
+            });
+
+            $('.ny_container_nynews_list_title>.ny_container_nynews_list_title_li').click(function () {
+                $(this).find('.ny_container_nynews_ul').show();
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+                $(this).siblings().find('.ny_container_nynews_ul').hide();
+
+            });
+
+            var bodyHeight = $(document.body).height();
+            var ContainerHeight = $(".ny_mainlist").height();
+            if (ContainerHeight != null) {
+                var bhch = bodyHeight - 247;
+                if (bhch > 0) {
+                    $(".ny_mainlist").css("min-height", bhch + "px");
+                }
+            }
+            else {
+                $(".ny_container_leftul_bg").css("display", "none");
+            }
+
+            ko.applyBindings(currentlinkApp, $("#Content_link")[0]);
+            loadCommonLinks();
+        });
+        var currentlinkApp = new linkModelApp();
+        function linkModelApp() {
+            var self = this;
+
+            self.links = ko.observableArray();
+            self.detaillinks = {
+                Name: ko.observable(""),
+                Icon: ko.observable(""),
+                Url: ko.observable("")
+            };
+        }
+
+        function loadCommonLinks() {
+         <%--   $.ajax({
+                cache: false,
+                type: "get",
+                url: '<%=DZAFCPortal.Config.Base.ClientBasePath %>/Client/AjaxPage/getHomeLinkHandler.ashx',
+                data: {
+                    Op: "commonLinks"
+                },
+                dataType: "json",
+                success: function (data) {
+                    currentlinkApp.links(data);
+                }
+            });--%>
+        }
+
+        function windowCH() {
+            var bodyHHeight = $(document.body).height();
+            var ContainerHHeight = $(".ny_mainlist").height();
+            if (ContainerHHeight != null) {
+                var bhchH = bodyHHeight - 247;
+                if (bhchH > 0) {
+                    $(".ny_mainlist").css("min-height", bhchH + "px");
+
+                }
+                else {
+                    $(".ny_footer").css("margin-top", "0px");
+                }
+            }
+
+        }
+
+        $(window).resize(windowCH);
+
+
+        //    var bodyHeight = $(document.body).height();
+        //    var ContainerHeight = $(".ny_mainlist").height();
+        //    if (ContainerHeight != null) {
+        //        var bhch = bodyHeight - ContainerHeight - 249;
+        //        if (bhch > 0) {
+        //            $(".ny_footer").css("margin-top", bhch + "px");
+        //        }
+        //    }
+        //    else {
+        //        $(".ny_container_leftul_bg").css("display", "none");
+        //    }                      
+
+        //});
+
+        //function windowCH() {
+        //    var bodyHHeight = $(document.body).height();
+        //    var ContainerHHeight = $(".ny_mainlist").height();
+        //    if (ContainerHHeight != null) {
+        //        var bhchH = bodyHHeight - ContainerHHeight - 249;
+        //        if (bhchH > 0) {
+        //            $(".ny_footer").css("margin-top", bhchH + "px");
+
+        //        }
+        //        else {
+        //            $(".ny_footer").css("margin-top", "0px");
+        //        }
+        //    }
+
+        //}
+
+        //$(window).resize(windowCH);
+
+
+        $(document).ready(function () {
+            $('.flicker-example1').flicker();
+            var TopNavId = getQueryString("TopNavId");
+            if (TopNavId != null)
+                $(".ny_header_ul>li[id='" + TopNavId.toLowerCase() + "']").addClass("active").siblings("li").removeClass("active");
+
+            $('#tabs_title li').click(function () {
+                $(this).addClass("active").siblings().removeClass();
+                $('#divShow > div').eq($('#tabs_title li').index(this)).show().siblings().hide();
+            });
+
+
+        });
+        function OpenEditUserInfo() {
+            $.layer({
+                type: 2,
+                title: "修改个人信息",
+                maxmin: false,
+                area: ['500px', '350px'],
+                border: [0, 0.3, '#000'],
+                shade: [0.6, '#000'],
+                shadeClose: true,
+                closeBtn: [0, true],
+                fix: true,
+                iframe: {
+                    src: '<%=DZAFCPortal.Config.Base.ClientBasePath%>/NY_EditUser.aspx',
+                    scrolling: 'no'
+                },
+                fadeIn: 1000
+            });
+        }
+
+        function OpenEditPasswordInfo() {
+            $.layer({
+                type: 2,
+                title: "修改个人密码",
+                maxmin: false,
+                area: ['500px', '350px'],
+                border: [0, 0.3, '#000'],
+                shade: [0.6, '#000'],
+                shadeClose: true,
+                closeBtn: [0, true],
+                fix: true,
+                iframe: {
+                    src: "<%=DZAFCPortal.Config.Base.ClientBasePath%>/NY_EditPassword.aspx",
+                    scrolling: 'no'
+                },
+                fadeIn: 1000
+            });
+        }
+
+        var showLayer;
+        function showUserConfigLayer() {
+            showLayer = $.layer({
+                type: 2,
+                title: "常用链接配置",
+                maxmin: false,
+                move: '.xubox_title',
+                area: [850, 550],
+                border: [0, 0.3, '#000'],
+                shade: [0.6, '#000'],
+                shadeClose: true,
+                closeBtn: [0, true],
+                fix: true,
+                iframe: {
+                    src: '<%=DZAFCPortal.Config.Base.ClientBasePath%>/baseLayoutShowLayer.aspx',
+                    scrolling: 'auto'
+                },
+                fadeIn: 1000,
+                success: function () {
+                    if ($(".index3D").css("display") == "block") {
+                        $("#ul1").css("display", "none");
+                    }
+                },
+                end: function () {
+                    if ($(".index3D").css("display") == "block") {
+                        $("#ul1").css("display", "block");
+                    }
+                }
+            });
+
+            return false;
+        }
+        function closeUserConfigLayer() {
+            layer.closeAll();
+            loadCommonLinks();
+        }
+
+    </script>
+</body>
+</html>

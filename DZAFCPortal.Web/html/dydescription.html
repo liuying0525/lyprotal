@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>公司动态详情页</title>
+    <meta name="dynamic" content="公司动态详情页">
+    <link rel="stylesheet" href="../Scripts/Client/css/base.css" />
+    <link rel="stylesheet" href="../Scripts/Client/css/dydescription.css">
+    <script src="../Scripts/jquery/jquery.min.js"></script>
+    <script src="../Scripts/Client/js/public.js"></script>
+</head>
+
+<body>
+<!-- 公司动态详情页 -->
+
+    <!-- 公共头部 -->
+    <div class="indexHeader">
+            <div class="headerleft leftP">
+                    <img src="../Scripts/Client/images/indexLogo.png" class="indexLogo" alt="" />
+                </div>
+                <div class="headerright rightP">
+                        <div class="userSetting rightP">
+                                <img src="../Scripts/Client/images/tips3.png" alt="" class="indexOut" />
+                                <ul class="settingBox">
+                                       <li><a href="javascript:void(0);">修改密码</a></li>
+                                       <li><a href="javascript:void(0);">个人信息</a></li>
+                                       <li><a href="javascript:void(0);">退出登录</a></li>
+                                       <li><a href="javascript:void(0);">后台管理</a></li>
+                                    </ul>        
+                           </div>
+                        <div class="userInfos rightP">
+                            <p>Ares</p>
+                            <p>职位职位职位</p>
+                        </div>
+                        <div class="indexUser rightP">
+                            <img src="../Scripts/Client/images/indexUser.png" alt="" />
+                        </div>
+                        <div class="indexMessage rightP">
+                            <div class="messages">IT通知：关于CRM维护通知</div>
+                        </div>
+                        <div class="indexInfo rightP">
+                            <img src="../Scripts/Client/images/indexInfo.png" alt="" />
+                            <div class="messagesNum">33</div>
+                        </div>
+                    </div>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="content">
+        <!-- 左边公用菜单栏 -->
+        <div class="left">
+            <ul class="types">
+                <li class="type" onclick="activeImgFunc(0)"><img src="../Scripts/Client/images/icon-index40.png" alt="" />系统首页</li>
+                <li class="type" onclick="activeImgFunc(1)"><img src="../Scripts/Client/images/icon-index00.png" alt="" />工作平台
+                </li>
+                <li class="type activeType" onclick="activeImgFunc(2)"><img src="../Scripts/Client/images/icon-index10.png" alt="" />公司动态</li>
+                <li class="type" onclick="activeImgFunc(3)"><img src="../Scripts/Client/images/icon-index2.png" alt="" />文档管理</li>
+                <li class="type" style="margin: 0;" onclick="activeImgFunc(4)"><img src="../Scripts/Client/images/icon-index3.png"
+                        alt="" />员工之家</li>
+            </ul>
+        </div>
+        <!-- 右边内容部分 -->
+        <div class="right">
+            <div class="descriptionconten">
+                <h4></h4>
+                <div class="content">
+                    <h6>标题</h6>
+                    <ul>
+                        <li>
+                            <span>发布时间：</span>
+                            <span>2017-11-01</span>
+                            <span>19：00</span>
+                        </li>
+                        <li>
+                            <span>发布人：</span>
+                            <span>xxx</span>
+                        </li>
+                    </ul>
+                    <p>
+                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    </p>
+                </div>
+            </div>
+             
+         </div>
+        </div>
+    </div>
+</body>
+<script>
+$(function(){
+    //根据url填充详情分类
+    var titleList={"hotnews":"热点新闻","itnotice":"IT通知","admininotice":"行政通知","companynotice":"公司通知"}; 
+    var h4Title=titleList[location.search.substr(1).split("=")[0]];
+    $(".right h4").html(h4Title);
+});
+</script>
+
+</html>

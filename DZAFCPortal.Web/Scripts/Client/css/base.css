@@ -1,0 +1,482 @@
+﻿@charset "utf-8";
+
+/* reset css*/
+html,
+body {
+    height: 100%;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 外框架  头部*/
+.indexHeader {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background: #000;
+    background: url("../images/ding.png") no-repeat top;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 300;
+}
+
+.headerright {
+    width: 47%;
+    margin-right: 2%;
+}
+
+.rightP {
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    cursor: pointer;
+}
+
+.headerleft {
+    line-height: 60px;
+    width: 7%;
+    height: 60px;
+    margin-left: 2%;
+}
+
+.leftP {
+    float: left;
+}
+
+.headerleft img {
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.userSetting {
+    height: 100%;
+    margin-left: 2%;
+    padding: 0 1%;
+    position: relative;
+}
+
+
+.userInfos {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 10px;
+    margin-right: 5px;
+}
+
+.userInfos p {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.indexInfo img {
+    height: 20.4px;
+    vertical-align: middle;
+}
+
+.indexInfo {
+    position: relative;
+    margin-right: 1%;
+}
+
+.indexOut {
+    height: 21.6px;
+    vertical-align: middle;
+}
+
+.indexUser {
+    margin-left: 2%;
+}
+
+.indexUser img {
+    height: 36px;
+    vertical-align: middle;
+}
+
+.indexMessage {
+    margin-right: 3%;
+}
+
+.settingBox {
+    display: none;
+    width: 191px;
+    height: 126px;
+    background: #fff;
+    position: absolute;
+    right: -80%;
+    top: 90%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.settingBox:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    right: 20px;
+    top: -6px;
+}
+
+.settingBox li {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+
+.settingBox li a {
+    display: inline-block;
+    line-height: 30px;
+    color: #494949;
+    width: 100%;
+}
+
+.settingBox li:hover a {
+    color: #784aa6
+}
+
+.settingBox li:nth-child(2) {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.settingBox li:nth-child(3) {
+    padding-top: 5px;
+}
+
+.userSetting:hover .settingBox {
+    display: block;
+}
+
+.messages {
+    font-size: 14px;
+    color: #fff;
+    background: url("../images/messageBg.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    padding: 0 9%;
+    white-space: normal;
+    width: 100%;
+}
+
+.messagesNum {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    font-size: 12px;
+    color: #fff;
+    background: #ff1111;
+    line-height: 24px;
+    text-align: center;
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+/* 內容部分左左邊 */
+.content {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.left {
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    background: #000;
+    width: 180px;
+    background: url("../images/ce.png") no-repeat top;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.types {
+    font-size: 14px;
+    color: #fff !important;
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+    background: url("../images/leftBg.png") no-repeat center right;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.types li:not(.activeType) a {
+    color: #fff;
+}
+
+
+.type {
+    height: 50px;
+    line-height: 50px;
+    width: 85%;
+    float: right;
+    background: rgba(255, 255, 255, 0.34);
+    list-style: none;
+    margin-bottom: 20px;
+    -webkit-border-radius: 25px 0 0 25px;
+    -moz-border-radius: 25px 0 0 25px;
+    border-radius: 25px 0 0 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.type img {
+    float: left;
+    height: 20px;
+    margin: 15px;
+}
+
+.activeType {
+    height: 56px;
+    line-height: 56px;
+    width: 100%;
+    background: #fff;
+    color: #383286;
+}
+
+/* 內容右邊部分 */
+.right {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0 20px 180px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    background: url("../images/di.png") no-repeat center top;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+/* 除首頁外的其他tab頁公共樣式 */
+.set-title {
+    float: left;
+    margin-left: 6%;
+    width: 36%;
+}
+
+.set-title li a {
+    float: left;
+    color: #fff;
+    margin: 0 1%;
+    width: 23%;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.set-title li .messagesNum {
+    left: 66%;
+}
+
+.set-title li.current {
+    position: relative;
+}
+
+.set-title li.current:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.set-title li.current a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.set-middle {
+    width: 100%;
+}
+
+.set-middle-top {
+    margin-left: 74px;
+    margin-top: 30px;
+    display: block;
+    overflow: hidden;
+    height: 80px;
+}
+
+.set-middle-top h4 {
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    font-size: 26px;
+}
+
+.set-middle-top {
+    margin-top: 30px;
+    display: block;
+    overflow: hidden;
+    height: 80px;
+}
+
+
+.set-middle-content {
+    display: block;
+    position: relative;
+    color: #202020;
+}
+
+.set-middle-content>ul>li {
+    padding: 17px 0;
+    /* border-bottom: 2px #f6f5fa solid; 
+    cursor: pointer; */
+}
+
+.set-middle-content>ul>li>span {
+    display: inline-block;
+    width: 10%;
+    padding-right: 5%;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.set-middle-content>ul>li>span:first-child {
+    width: 30%;
+    padding-left: 74px;
+    text-align: left;
+}
+
+.platformInput {
+    position: relative;
+    float: right;
+    margin-right: 158px;
+    height: 46px;
+    line-height: 46px;
+    width: 50%;
+}
+
+.platformInput input {
+    width: 100%;
+    height: 100%;
+    padding-left: 35px;
+    border-radius: 22px;
+    border: 1px solid #000;
+    background: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.platformInput i {
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 32px;
+    background: url(../images/search_2.png) no-repeat 0 0;
+    top: 7px;
+    z-index: 2;
+}
+
+/* 后加的分页 */
+.apsnetPaper {
+
+    padding: 0 20px;
+    margin: 10px 0 20px 0;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+}
+
+.apsnetPaper:after {
+
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.paginator {
+    display: block;
+
+
+}
+
+.paginator>a,
+.paginator>span {
+    float: left;
+    color: #666;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    text-align: center;
+    min-width: 14px;
+    margin: 0 5px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    color: #575757;
+}
+
+
+.paginator>a:nth-child(2),
+.paginator>a:nth-last-child(2) {
+    background: none;
+    color: #575757;
+    box-shadow: none;
+    border: none;
+}
+
+.paginator .cpb {
+    background: #5e50b0;
+    color: #FFF;
+    border-color: #5e50b0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+    cursor: default;
+}

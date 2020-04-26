@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDB6A57F-1EE6-41B0-9C42-0D2654025DCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DZAFCPortal.Service</RootNamespace>
+    <AssemblyName>DZAFCPortal.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DZAFCPortal.Service.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="NySoftland.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacc6d03b4fa1c1f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DZAFCPortal.Library\CORE\NySoftland.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.3.1\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.19.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FTP\FtpFileService.cs" />
+    <Compile Include="FTP\FtpFoldersOrgsRLService.cs" />
+    <Compile Include="FTP\FtpFolderService.cs" />
+    <Compile Include="CMS\AttachService.cs" />
+    <Compile Include="CorporateAssetsInfoService.cs" />
+    <Compile Include="FriendNewsReplyService.cs" />
+    <Compile Include="FriendNewsService.cs" />
+    <Compile Include="Kn_FixGroupService.cs" />
+    <Compile Include="Kn_FixPersonService.cs" />
+    <Compile Include="Kn_FixService.cs" />
+    <Compile Include="Kn_IssueService.cs" />
+    <Compile Include="MyFriendsService.cs" />
+    <Compile Include="NavigateService.cs" />
+    <Compile Include="BizGenericService.cs" />
+    <Compile Include="HighlightsLikeHistoryService.cs" />
+    <Compile Include="HighlightsService.cs" />
+    <Compile Include="NewsCategoryService.cs" />
+    <Compile Include="NewsService.cs" />
+    <Compile Include="EmployeeInforService.cs" />
+    <Compile Include="ActivityParticipantsService.cs" />
+    <Compile Include="ActivitiesService.cs" />
+    <Compile Include="ActivityTeamsService.cs" />
+    <Compile Include="CommonLinkService.cs" />
+    <Compile Include="InforAccessService.cs" />
+    <Compile Include="OnlineVoteRecordsService.cs" />
+    <Compile Include="OnlineVoteOptionsService.cs" />
+    <Compile Include="OnlineVoteService.cs" />
+    <Compile Include="IndexScrollService.cs" />
+    <Compile Include="PageLinkUserConfigService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UMS_MessageService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DZAFCPortal.Service.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DZAFCPortal.Authorization\DZAFCPortal.Authorization.csproj">
+      <Project>{1EF7C53B-E6A6-4BF5-B4E8-C78169D12325}</Project>
+      <Name>DZAFCPortal.Authorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Config\DZAFCPortal.Config.csproj">
+      <Project>{57F3A779-0C05-4388-B119-61B2FBBD5A81}</Project>
+      <Name>DZAFCPortal.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Entity\DZAFCPortal.Entity.csproj">
+      <Project>{2DEEA215-7A08-4079-98DB-18B81A71A931}</Project>
+      <Name>DZAFCPortal.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Repository\DZAFCPortal.Repository.csproj">
+      <Project>{6EB84967-4A5B-4046-B07A-124BB06F5330}</Project>
+      <Name>DZAFCPortal.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Utility\DZAFCPortal.Utility.csproj">
+      <Project>{DCB9F754-7222-41E2-8CDF-D6683AAF1038}</Project>
+      <Name>DZAFCPortal.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.ViewModel\DZAFCPortal.ViewModel.csproj">
+      <Project>{85c1a1ae-8af9-42a5-962c-89fe5544c758}</Project>
+      <Name>DZAFCPortal.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

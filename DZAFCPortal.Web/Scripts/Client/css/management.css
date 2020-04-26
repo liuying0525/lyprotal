@@ -1,0 +1,16 @@
+
+
+.management .set-middle-content>ul>li span {
+    width: 55%;
+}
+
+.management .set-middle-content>ul>li a {
+    display: inline-block;
+    width: 8%;
+    color: #5f4fb1;
+    text-decoration: underline;
+}
+.management .set-middle-content>ul li:first-child{
+    background: rgba(255, 255, 255, .5);
+    cursor: default;
+}

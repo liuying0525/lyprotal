@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="/Scripts/Client/css/login.css" rel="stylesheet" />
+    <script src="/Scripts/jquery/jquery.min.js"></script>
+    <script src="/Scripts/Lib/jsencrypt.min.js"></script>
+    <script src="/Scripts/Client/js/clientCommon.js"></script>
+    <script src="http://rescdn.qqmail.com/node/ww/wwopenmng/js/sso/wwLogin-1.0.0.js"></script>
+    <!--<script src="/Scripts/Lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="/Scripts/Lib/jquery-validate/messages_zh.min.js"></script>-->
+    <script type="text/javascript">
+        $(function () {
+            $("#reset_pwd").on("click", "#send_code", sendCode);
+
+            $('#submit').click(function () {
+                var data = [];
+                data['username'] = $('#username').val();
+                data['password'] = $('#password').val();
+
+                //public key
+                var pkey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCk4dIe4Kqke8gc2G9SjhVuwzIifwYJh3LC718R2kBcRnAULFfAB8gL6kNd7bb98hfgQgNiH7ft8KNeCihPjRziZZoeuWZelk2sl9rfBUsgnAsuukjUQ+zo2Yzqq9T+p4TF2olhBjlvnsQSDhAH+YhYCp8Wm5mfKgwkqM3k+cqaaQIDAQAB";
+                encryptRequest(login_req_url, data, pkey);
+            });
+
+            $(".loginRight").on('click', ".zhezhao", function (e) {
+                $(this).parent().removeClass("intro");
+            });
+            //$("#email").validate({
+            //    onkeyup: true
+            //});
+        });
+        var login_req_url = "Client/AjaxPage/loginHandler.ashx";
+        var RESET_COUNT = 60;
+        var count_down = RESET_COUNT;
+        function setTime(obj) {
+            if (count_down == 0) {
+                obj.css("cursor", "pointer");
+                obj.css("background", "#3194d0");
+                $("#reset_pwd").on("click", "#send_code", sendCode);
+                obj.val("发送验证码");
+                count_down = RESET_COUNT;
+                return;
+            } else {
+                obj.css("background", "#ddd");
+                obj.css("cursor", "default");
+                if (count_down == RESET_COUNT) {
+                    $("#reset_pwd").off("click", "#send_code");
+                }
+                obj.val("重新发送(" + count_down + ")");
+                count_down--;
+            }
+            setTimeout(function () { setTime(obj) }, 1000);
+        }
+        function sendCode() {
+            var flag = false;
+            var email = $.trim($("#email").val());
+            var message = "";
+            var regex = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            if (email == '') {
+                message = "邮箱不能为空！";
+            } else if (!regex.test(email)) {
+                message = "请输入有效的邮箱地址！";
+            } else {
+                flag = true;
+            }
+            if (flag) {
+                $.ajax({
+                    url: login_req_url,
+                    type: 'post',
+                    data: { "mode": "send_code_via_mail", "mail_address": email },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.errorNumber == 0 && data.errors.length == 0) {
+                            setTime($("#send_code"));
+                            $("#reset_pwd").off("click", "#send_code");
+                        }
+                        else {
+                            $("#errMsg").html("[" + data.errorNumber + "]" + data.errors.join(';'));
+                        }
+
+                        //if (!data.IsSucess) {
+                        //    $("#errMsg").html("[" + data.ResultCode + "]" + data.Message);
+                        //}
+                        //else {
+                        //    setTime($("#send_code"));
+                        //    $("#reset_pwd").off("click", "#send_code");
+                        //}
+                    },
+                    error: function (xhr) {
+                        $("#errMsg").html('请求失败！');
+                    }
+                });
+            } else {
+                $("#errMsg").html(message);
+            }
+        }
+        function modifyPwd() {
+            var email = $.trim($("#email").val());
+            var code = $.trim($("#code").val());
+            var new_pwd = $.trim($("#newpwd").val());
+            var re_new_pwd = $.trim($("#newpwd_confirm").val());
+
+            if (new_pwd != re_new_pwd) {
+                $("#errMsg").html("新密码两次输入不一致"); return false;
+            }
+            $.ajax({
+                url: login_req_url,
+                type: 'post',
+                data: {
+                    "mode": "verify_code",
+                    "mail_address": email,
+                    "vcode": code,
+                },
+                dataType: 'json',
+                success: function (data) {
+                    if (data.errorNumber == 0 && data.errors.length == 0) {
+                        $.ajax({
+                            url: login_req_url,
+                            type: 'post',
+                            data: {
+                                "mode": "submit_modify_pwd",
+                                "new_pwd": new_pwd,
+                                "re_new_pwd": re_new_pwd,
+                                "enduser_token": data.accessToken,
+                                "state": data.state
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                if (!(data.errorNumber == 0 && data.errors.length == 0)) {
+                                    $("#errMsg").html("[" + data.errorNumber + "]" + data.errors.join(';'));
+                                }
+                                else {
+                                    window.location.reload();
+                                }
+                            },
+                            error: function (xhr) {
+                                $("#errMsg").html('请求失败！');
+                            }
+                        });
+                    }
+                    else {
+                        $("#errMsg").html("[" + data.errorNumber + "]" + data.errors.join(';'));
+                    }
+
+
+                },
+                error: function (xhr) {
+                    $("#errMsg").html('请求失败！');
+                }
+            });
+
+        }
+        function switchDisplayStatus(hide_id, display_id) {
+            var hide_obj = $("#" + hide_id);
+            var display_obj = $("#" + display_id);
+            if (hide_obj) {
+                hide_obj.css('display', 'none');
+            }
+            if (display_obj) {
+                display_obj.css('display', '');
+            }
+        }
+        function encryptRequest(reqUrl, data, publicKey) {
+            var encrypt = new JSEncrypt();
+            encrypt.setPublicKey(publicKey);
+            var sendData = new Object();
+            for (var key in data) {
+                sendData[key] = encrypt.encrypt(data[key]);
+            }
+
+            sendData["mode"] = "u_plus_p";
+            $.ajax({
+                url: reqUrl,
+                type: 'post',
+                data: sendData,
+                dataType: 'json',
+                success: function (data) {
+                    if (!data.IsSucess) {
+                        $("#errMsg").html(data.Message);
+                    }
+                    else {
+                        $("#errMsg").html("登录成功!");
+
+                        var redirect_url = getQueryString("redirect_url");
+                        var url = redirect_url == null ? "Index.aspx" : decodeURIComponent(redirect_url);
+                        window.location.href = url;
+                    }
+                },
+                error: function (xhr) {
+                    //console.error('出错了');
+                }
+            });
+
+        }
+        function buildQRCode() {
+            $("#wxreg_bg").fadeIn();
+            $("#wxreg_bg").addClass("intro");
+            window.WwLogin({
+                "id": "wx_reg",
+                "appid": "wwb7fe0465bb9ec8a4",
+                "agentid": "1000012",
+                "redirect_uri": encodeURI("https://api.dongzhengafc.com/api/Wechat/default/RetrieveWechatUserInfo"),
+                "state": Math.random(),
+                "href": "data:text/css;base64,77u/LyoNCiAgICBhZGRlZCBieSB6aGFueGwg5LqM57u056CB5qC35byP5LyY5YyWDQogICAgMjAxOeW5tDEx5pyIMTLml6UgMTbngrk1NuWIhg0KKi8NCi5ub3JtYWxQYW5lbC5jYXJkID4gLnRpdGxlLCBkaXYjd3hfZGVmYXVsdF90aXAgcDpsYXN0LWNoaWxkIHsNCiAgICBkaXNwbGF5OiBub25lOw0KfQ0KDQpkaXYjd3hfZGVmYXVsdF90aXAgew0KICAgIHBhZGRpbmc6IDM1cHggMCAhaW1wb3J0YW50Ow0KfQ0KDQogICAgZGl2I3d4X2RlZmF1bHRfdGlwIHAgew0KICAgICAgICBmb250LXNpemU6IDE1cHg7DQogICAgfQ0K",
+            })
+            //alert("login qr");
+        }
+    </script>
+</head>
+<body>
+    <div class="loginBox">
+        <div class="loginRight">
+            <form class="formBox" autocomplete="off" autosize="true">
+
+                <div id="sign_in">
+                    <p class="labelText">用户名</p>
+                    <input type="text" class="labelInput" placeholder="请输入用户名" id="username" autocomplete="off" />
+                    <p class="labelText">密码</p>
+                    <input type="password" class="labelInput" placeholder="请输入密码" id="password" autocomplete="new-password" />
+                    <p class="labelBtns">
+                        <span class="codeBtn" onclick="buildQRCode()">二维码登录</span>
+                        <span class="forgetBtn" onclick="switchDisplayStatus('sign_in','reset_pwd')">忘记密码</span>
+                    </p>
+                    <button class="loginBtn" id="submit" type="button">登录</button>
+                </div>
+                <div id="reset_pwd" style="display:none">
+                    <a href="javascript:void(0);" id="goback" onclick="switchDisplayStatus('reset_pwd','sign_in')"></a>
+                    <input type="text" class="labelInput" placeholder="请输入邮箱地址" id="email" name="email" autocomplete="off" />
+                    <input type="text" class="labelInput" placeholder="请输入验证码" id="code" name="code" autocomplete="off" />
+                    <input type="password" class="labelInput" placeholder="请输入新密码" id="newpwd" name="newpwd" autocomplete="off" />
+                    <input type="password" class="labelInput" placeholder="再次输入新密码" id="newpwd_confirm" name="newpwd_confirm" autocomplete="off" />
+                    <input type="button" id="send_code" style="cursor:pointer" value="发送验证码" />
+                    <button class="loginBtn" id="submit" type="button" onclick="modifyPwd()">确定</button>
+                    <!--<input class="loginBtn" type="submit"  onclick="modifyPwd()" value="确定" />-->
+                </div>
+
+                <span style="color:red" id="errMsg"></span>
+                <div id="wxreg_bg">
+                    <div class="zhezhao zhezhao1"></div>
+                    <div class="zhezhao zhezhao2"></div>
+                    <div class="zhezhao zhezhao3"></div>
+                    <div class="zhezhao zhezhao4"></div>
+                    <div id="wx_reg"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

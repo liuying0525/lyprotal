@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15145D3C-D78B-42B9-867F-AEC1ECFB92FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DZAFCPortal.Facade</RootNamespace>
+    <AssemblyName>DZAFCPortal.Facade</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DZAFCPortal.Facade.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NySoftland.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacc6d03b4fa1c1f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DZAFCPortal.Library\CORE\NySoftland.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationFacade.cs" />
+    <Compile Include="ListToDataTable.cs" />
+    <Compile Include="NavigateFacade.cs" />
+    <Compile Include="PredicateExtensionses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repOrderSupple.cs" />
+    <Compile Include="reportSQL .cs" />
+    <Compile Include="SettingLinks.cs" />
+    <Compile Include="SSO\SSOFacade.cs" />
+    <Compile Include="StatusFacade.cs" />
+    <Compile Include="userDisplayName.cs" />
+    <Compile Include="WFAttachSQL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DZAFCPortal.Authorization\DZAFCPortal.Authorization.csproj">
+      <Project>{1ef7c53b-e6a6-4bf5-b4e8-c78169d12325}</Project>
+      <Name>DZAFCPortal.Authorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Config\DZAFCPortal.Config.csproj">
+      <Project>{57f3a779-0c05-4388-b119-61b2fbbd5a81}</Project>
+      <Name>DZAFCPortal.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Entity\DZAFCPortal.Entity.csproj">
+      <Project>{2DEEA215-7A08-4079-98DB-18B81A71A931}</Project>
+      <Name>DZAFCPortal.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Service\DZAFCPortal.Service.csproj">
+      <Project>{cdb6a57f-1ee6-41b0-9c42-0d2654025dca}</Project>
+      <Name>DZAFCPortal.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.Utility\DZAFCPortal.Utility.csproj">
+      <Project>{dcb9f754-7222-41e2-8cdf-d6683aaf1038}</Project>
+      <Name>DZAFCPortal.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DZAFCPortal.ViewModel\DZAFCPortal.ViewModel.csproj">
+      <Project>{85c1a1ae-8af9-42a5-962c-89fe5544c758}</Project>
+      <Name>DZAFCPortal.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DZAFCPortal.Facade.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

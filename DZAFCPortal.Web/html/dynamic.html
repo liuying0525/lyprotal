@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>公司动态</title>
+    <meta name="dynamic" content="公司动态">
+    <link rel=" stylesheet" href="../Scripts/Client/ThirdLibs/simplePagination/css/simplePagination.css">
+    <link rel="stylesheet" href="../Scripts/Client/css/base.css" />
+ <link rel="stylesheet" href="../Scripts/Client/css/dynamic.css">
+    <script src="../Scripts/jquery/jquery.min.js"></script>
+    <script src="../Scripts/Client/ThirdLibs/simplePagination/js/jquery.simplePagination.js"></script>
+    <script src="../Scripts/Client/js/public.js"></script>
+</head>
+
+<body>
+    <!-- 公司动态列表页 -->
+    <!-- 公共头部 -->
+    <div class="indexHeader">
+        <div class="headerleft leftP">
+            <img src="../Scripts/Client/images/indexLogo.png" class="indexLogo" alt="" />
+        </div>
+        <!-- 公司动态头部菜单 -->
+        <ul class="set-title hd">
+            <li data-li="0">
+                <a href="javascript:void(0);">热点新闻</a>
+            </li>
+            <li data-li="1"><a href="javascript:void(0);">IT通知</a></li>
+            <li data-li="2"><a href="javascript:void(0);">行政通知</a></li>
+            <li data-li="3"><a href="javascript:void(0);">公司通知</a></li>
+        </ul>
+
+        <div class="headerright rightP">
+            <div class="userSetting rightP">
+                <img src="../Scripts/Client/images/tips3.png" alt="" class="indexOut" />
+                <ul class="settingBox">
+                    <li><a href="javascript:void(0);">修改密码</a></li>
+                    <li><a href="javascript:void(0);">个人信息</a></li>
+                    <li><a href="javascript:void(0);">退出登录</a></li>
+                    <li><a href="javascript:void(0);">后台管理</a></li>
+                </ul>
+            </div>
+            <div class="userInfos rightP">
+                <p>Ares</p>
+                <p>职位职位职位</p>
+            </div>
+            <div class="indexUser rightP">
+                <img src="../Scripts/Client/images/indexUser.png" alt="" />
+            </div>
+            <div class="indexMessage rightP">
+                <div class="messages">IT通知：关于CRM维护通知</div>
+            </div>
+            <div class="indexInfo rightP">
+                <img src="../Scripts/Client/images/indexInfo.png" alt="" />
+                <div class="messagesNum">33</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="content">
+        <!-- 左边菜单栏 -->
+        <div class="left">
+            <ul class="types">
+                <li class="type" onclick="activeImgFunc(0)"><img src="../Scripts/Client/images/icon-index40.png" alt="" />系统首页</li>
+                <li class="type" onclick="activeImgFunc(1)">
+                    <img src="../Scripts/Client/images/icon-index00.png" alt="" />工作平台
+                </li>
+                <li class="type activeType" onclick="activeImgFunc(2)"><img src="../Scripts/Client/images/icon-index10.png" alt="" />公司动态</li>
+                <li class="type" onclick="activeImgFunc(3)"><img src="../Scripts/Client/images/icon-index2.png" alt="" />文档管理</li>
+                <li class="type" style="margin: 0;" onclick="activeImgFunc(4)">
+                    <img src="../Scripts/Client/images/icon-index3.png"
+                         alt="" />员工之家
+                </li>
+            </ul>
+        </div>
+        <!-- 右边内容部分 -->
+        <div class="right">
+            <div class="set-middle bd description dynamic">
+                <!-- 热点新闻内容 -->
+                <div class="set-middle-item hotnews">
+                    <div class="set-middle-top">
+                        <h4>热点新闻</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                        <ul>
+                            <li>
+                                <span>标题</span>
+                                <span>发布人</span>
+                                <span>发布时间</span>
+                            </li>
+                            <li>
+                                <span>东正金融与工商银行达成战略合作伙伴</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>2019年汽车金融行业报告</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                        </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- IT通知内容 -->
+                <div class="set-middle-item itnotice">
+                    <div class="set-middle-top">
+                        <h4>IT通知</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                        <ul>
+                            <li>
+                                <span>标题</span>
+                                <span>发布人</span>
+                                <span>发布时间</span>
+                            </li>
+                            <li>
+                                <span>东正金融与工商银行达成战略合作伙伴</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>2019年汽车金融行业报告</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                        </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 行政通知内容 -->
+                <div class="set-middle-item admininotice">
+                    <div class="set-middle-top">
+                        <h4>行政通知</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                        <ul>
+                            <li>
+                                <span>标题</span>
+                                <span>发布人</span>
+                                <span>发布时间</span>
+                            </li>
+                            <li>
+                                <span>东正金融与工商银行达成战略合作伙伴</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>2019年汽车金融行业报告</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                        </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 公司通知内容 -->
+                <div class="set-middle-item companynotice">
+                    <div class="set-middle-top">
+                        <h4>公司通知</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                        <ul>
+                            <li>
+                                <span>标题</span>
+                                <span>发布人</span>
+                                <span>发布时间</span>
+                            </li>
+                            <li>
+                                <span>东正金融与工商银行达成战略合作伙伴</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>2019年汽车金融行业报告</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                            <li>
+                                <span>xxxxxxxxxx</span>
+                                <span>xxxxxx</span>
+                                <span>2019/9/05 12:30</span>
+                            </li>
+                        </ul>
+                        <!-- 分页插件 -->
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('.pagination').pagination({
+        pages: 11,
+        cssStyle: 'light-theme'
+    });
+</script>
+
+</html>

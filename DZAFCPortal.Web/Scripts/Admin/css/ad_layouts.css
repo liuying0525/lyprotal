@@ -1,0 +1,220 @@
+﻿.center_left {
+    width: 24%;
+    margin-right: 1%;
+    padding: 20px 10px;
+    overflow: auto;
+}
+
+
+.center_right {
+    width: 75%;
+    padding-top: 20px;
+}
+
+.container_main {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+    max-width: none;
+}
+
+.bread_nav {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-weight: bold; 
+    border-bottom: 1px solid #808080;
+    -moz-box-shadow: 0 0 20px #808080;
+    -webkit-box-shadow: 0 0 20px #808080;
+    box-shadow: 0 0 20px #808080;
+    color: #ffffff;
+    background: #075579;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #007A9C), color-stop(0.66, #075579));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#007A9C, #075579);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#007A9C, #075579);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007A9C', endColorstr='#075579');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#007A9C', endColorstr='#075579')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#007A9C, #075579);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#007A9C, #075579);
+    /* 标准写法 */
+    background-image: linear-gradient(#007A9C, #075579);
+}
+
+.BEA_btn {
+    display: block;
+    height: 40px;
+    padding: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.BEA_btn_blue .glyphicon-plus-sign:before {
+    margin-right: 5px !important;
+}
+
+.BEA_btn:hover {
+    opacity: 0.7;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.BEA_btn_blue {
+    color: #ffffff;
+    background: #337AB7;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #337AB7), color-stop(0.66, #2E6DA4));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#337AB7, #2E6DA4);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#337AB7, #2E6DA4);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#337AB7', endColorstr='#2E6DA4');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#337AB7', endColorstr='#2E6DA4')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#337AB7, #2E6DA4);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#337AB7, #2E6DA4);
+    /* 标准写法 */
+    background-image: linear-gradient(#337AB7, #2E6DA4);
+    border: 1px solid #2E6DA4;
+}
+
+.BEA_btn_green {
+    color: #ffffff;
+    background: #5CB85C;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.32, #5CB85C), color-stop(0.66, #4ba44b));
+    /* chrome 10+, safari 5.1+ */
+    background-image: -webkit-linear-gradient(#5CB85C, #4ba44b);
+    /* firefox; multiple color stops */
+    background-image: -moz-linear-gradient(top,#5CB85C, #4ba44b);
+    /* ie 6+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CB85C', endColorstr='#4ba44b');
+    /* ie8 + */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CB85C', endColorstr='#4ba44b')";
+    /* ie10 */
+    background-image: -ms-linear-gradient(#5CB85C, #4ba44b);
+    /* opera 11.1 */
+    background-image: -o-linear-gradient(#5CB85C, #4ba44b);
+    /* 标准写法 */
+    background-image: linear-gradient(#5CB85C, #4ba44b);
+    border: 1px solid #4ba44b;
+}
+
+.BEA_tree {
+    background-color: #f5f5f5;
+    border: 1px solid #DDDDDD;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 205px;
+}
+
+    .BEA_tree li {
+        line-height: 24px !important;
+    }
+
+        .BEA_tree li a.curSelectedNode {
+            height: 24px !important;
+            background-color: #ffffff !important;
+            border: 1px solid #007A9C !important;
+        }
+
+        .BEA_tree li span.button.ico_open, .BEA_tree li span.button.ico_close, .BEA_tree li span.button.ico_docu, .BEA_tree li span.button.remove {
+            margin-top: 3px !important;
+        }
+
+        .BEA_tree li span.button.remove {
+            margin-left: 10px;
+        }
+
+        .BEA_tree li a {
+            height: 24px;
+        }
+
+.BEA_table thead > tr > th, .BEA_table tbody > tr > th, .BEA_table tfoot > tr > th, .BEA_table thead > tr > td, .BEA_table tbody > tr > td, .BEA_table tfoot > tr > td {
+    padding: 5px 10px;
+}
+
+.BEA_table_list thead > tr > td, .BEA_table_list tbody > tr > td, .BEA_table_list tfoot > tr > td {
+    padding: 3px 5px !important;
+}
+
+.BEA_table_list thead > tr > th, .BEA_table_list tbody > tr > th, .BEA_table_list tfoot > tr > th {
+    background-color: #f1f1f1 !important;
+}
+
+.BEA_table_title {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #2E6DA4;
+    font-weight: bold;
+}
+
+.BEA_title_bg {
+    background-color: #F5F5F5 !important;
+    border: 1px solid #E3E3E3;
+    /*margin:20px;*/
+}
+
+.BEA_div_bg {
+    padding: 0 20px;
+    background-color: #f3f3f3;
+    overflow: auto;
+}
+
+.BEA_overflow {
+    overflow: hidden;
+}
+
+.error {
+    color: red;
+    font-weight: normal;
+}
+
+.none-data {
+    text-align: center;
+    display: block;
+}
+
+.BEA_Time_input{
+    background:url(../images/btn_bluecalendar.png) no-repeat right 10px center;
+}
+.add_save {
+    padding: 6px 20px;
+    background-color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.125);
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.125);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.125);
+    /*text-shadow: 0 -1px 3px rgba(0,0,0,0.125);*/
+    border: 1px solid #CECECE;
+    color: #009BDF;
+    font-weight: bold;
+    font-size: 14px;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei' !important;
+    cursor: pointer;
+    outline: none;
+}
+
+
+

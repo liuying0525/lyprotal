@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>员工之家</title>
+    <meta name="employees" content="员工之家">
+    <link rel=" stylesheet" href="../Scripts/Client/ThirdLibs/simplePagination/css/simplePagination.css">
+    <link rel="stylesheet" href="../Scripts/Client/css/base.css" />
+    <link rel="stylesheet" href="../Scripts/Client/css/employees.css">
+    <script src="../Scripts/jquery/jquery.min.js"></script>
+    <script src="../Scripts/Client/ThirdLibs/simplePagination/js/jquery.simplePagination.js"></script>
+    <script src="../Scripts/Client/js/public.js"></script>
+</head>
+
+<body>
+<!-- 员工之家页面(列表页) -->
+
+    <!-- 公共头部 -->
+    <div class="indexHeader">
+            <div class="headerleft leftP">
+                    <img src="../Scripts/Client/images/indexLogo.png" class="indexLogo" alt="" />
+                </div>
+        <!-- 员工之家头部菜单 -->
+        <ul class="set-title hd">
+            <li data-li="0"><a href="javascript:void(0);">活动召集</a></li>
+            <li data-li="1"><a href="javascript:void(0);">活动风采</a></li>
+            <li data-li="2"><a href="javascript:void(0);">在线评选</a></li>
+        </ul>
+
+        <div class="headerright rightP">
+                <div class="userSetting rightP">
+                        <img src="../Scripts/Client/images/tips3.png" alt="" class="indexOut" />
+                        <ul class="settingBox">
+                               <li><a href="javascript:void(0);">修改密码</a></li>
+                               <li><a href="javascript:void(0);">个人信息</a></li>
+                               <li><a href="javascript:void(0);">退出登录</a></li>
+                               <li><a href="javascript:void(0);">后台管理</a></li>
+                            </ul>        
+                   </div>
+                <div class="userInfos rightP">
+                    <p>Ares</p>
+                    <p>职位职位职位</p>
+                </div>
+                <div class="indexUser rightP">
+                    <img src="../Scripts/Client/images/indexUser.png" alt="" />
+                </div>
+                <div class="indexMessage rightP">
+                    <div class="messages">IT通知：关于CRM维护通知</div>
+                </div>
+                <div class="indexInfo rightP">
+                    <img src="../Scripts/Client/images/indexInfo.png" alt="" />
+                    <div class="messagesNum">33</div>
+                </div>
+            </div>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="content">
+        <!-- 左边菜单栏 -->
+        <div class="left">
+            <ul class="types">
+                <li class="type" onclick="activeImgFunc(0)"><img src="../Scripts/Client/images/icon-index4.png" alt="" />系统首页</li>
+                <li class="type" onclick="activeImgFunc(1)"><img src="../Scripts/Client/images/icon-index0.png" alt="" />工作平台
+                </li>
+                <li class="type" onclick="activeImgFunc(2)"><img src="../Scripts/Client/images/icon-index1.png" alt="" />公司动态</li>
+                <li class="type" onclick="activeImgFunc(3)"><img src="../Scripts/Client/images/icon-index2.png" alt="" />文档管理</li>
+                <li class="type activeType" style="margin: 0;" onclick="activeImgFunc(4)"><img src="../Scripts/Client/images/icon-index30.png"
+                        alt="" />员工之家</li>
+            </ul>
+        </div>
+        <!-- 右边内容部分 -->
+        <div class="right">
+            <div class="set-middle bd description employees">
+                <!-- 活动召集列表页 -->
+                <div class="set-middle-item convene">
+                    <div class="set-middle-top">
+                        <h4>活动召集</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                        <ul>
+                            <li>
+                                <div class="emplisticon">
+                                    <img src="" alt="">
+                                    <span>标题名称</span>
+                                    <span>简介简介简介简介简介简介简介简介</span>
+                                </div>
+                                <div class="emplistime">
+                                    <div><span>报名时间：</span><span>xxxx/xx/xxx</span></div>
+                                    <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                </div>
+                                <div class="emplistright">创建人：xxx</div>
+                            </li>
+                            <li>
+                                    <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span>标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistime">
+                                            <div><span>报名时间：</span><span>xxxx/xx/xxx</span></div>
+                                            <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                        </div>
+                                        <div class="emplistright">创建人：xxx</div>
+                            </li>
+                            <li>
+                                    <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span>标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistime">
+                                            <div><span>报名时间：</span><span>xxxx/xx/xxx</span></div>
+                                            <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                        </div>
+                                        <div class="emplistright">创建人：xxx</div>
+                            </li>
+                            <li>
+                                    <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span>标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistime">
+                                            <div><span>报名时间：</span><span>xxxx/xx/xxx</span></div>
+                                            <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                        </div>
+                                        <div class="emplistright">创建人：xxx</div>
+                            </li>
+                            <li>
+                                    <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span>标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistime">
+                                            <div><span>报名时间：</span><span>xxxx/xx/xxx</span></div>
+                                            <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                        </div>
+                                        <div class="emplistright">创建人：xxx</div>
+                            </li>
+                        
+                        </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 活动风采列表页 -->
+                <div class="set-middle-item presence">
+                    <div class="set-middle-top">
+                        <h4>活动风采</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                            <ul>
+                                    <li>
+                                        <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span>标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistime">
+                                          
+                                            <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                        </div>
+                                        <div class="emplistright">创建人：xxx</div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span>标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistime">
+                                          
+                                                    <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                                </div>
+                                                <div class="emplistright">创建人：xxx</div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span>标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistime">
+                                          
+                                                    <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                                </div>
+                                                <div class="emplistright">创建人：xxx</div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span>标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistime">
+                                          
+                                                    <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                                </div>
+                                                <div class="emplistright">创建人：xxx</div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span>标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistime">
+                                          
+                                                    <div><span>活动时间：</span><span>xxxx/xx/xxx</span></div>
+                                                </div>
+                                                <div class="emplistright">创建人：xxx</div>
+                                    </li>
+                                
+                                </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 在线评选列表页 -->
+                <div class="set-middle-item appraise">
+                    <div class="set-middle-top">
+                        <h4>在线评选</h4>
+                        <div class="platformInput">
+                            <input type="text" placeholder="请输入">
+                            <i class="search"></i>
+                        </div>
+
+                    </div>
+                    <div class="set-middle-content">
+                            <ul>
+                                    <li>
+                                        <div class="emplisticon">
+                                            <img src="" alt="">
+                                            <span class="title">标题名称</span>
+                                            <span>简介简介简介简介简介简介简介简介</span>
+                                        </div>
+                                        <div class="emplistright">
+                                            <ul>
+                                                <li>
+                                                    <span class="optiontitle">选项1</span>
+                                                    <!-- <span class="percent "> -->
+                                                            <span class="innerpercent percentone"></span>
+                                                    <!-- </span> -->
+                                                    <span class="num numone">10票</span>
+                                                </li>
+                                                <li>
+                                                        <span class="optiontitle">选项2</span>
+                                                        <!-- <span class="percent"> -->
+                                                            <span class="innerpercent percenttwo"></span>
+                                                        <!-- </span> -->
+                                                        <span class="num numtwo">7票</span>
+                                                </li>
+                                                <li>
+                                                        <span class="optiontitle">选项3</span>
+                                                        <!-- <span class="percent "> -->
+                                                                <span class="innerpercent percentthree"></span>
+                                                        <!-- </span> -->
+                                                        <span class="num numthree">4票</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span class="title">标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistright">
+                                                        <ul>
+                                                                <li>
+                                                                    <span class="title">选项1</span>
+                                                                    <!-- <span class="percent "> -->
+                                                                            <span class="innerpercent percentone"></span>
+                                                                    <!-- </span> -->
+                                                                    <span class="num numone">10票</span>
+                                                                </li>
+                                                                <li>
+                                                                        <span class="title">选项2</span>
+                                                                        <!-- <span class="percent"> -->
+                                                                            <span class="innerpercent percenttwo"></span>
+                                                                        <!-- </span> -->
+                                                                        <span class="num numtwo">7票</span>
+                                                                </li>
+                                                                <li>
+                                                                        <span class="title">选项3</span>
+                                                                        <!-- <span class="percent "> -->
+                                                                                <span class="innerpercent percentthree"></span>
+                                                                        <!-- </span> -->
+                                                                        <span class="num numthree">4票</span>
+                                                                </li>
+                                                            </ul>
+
+                                                </div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span class="title">标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistright pendding">
+                                                            投票火热进行中
+                                                  
+                                                      
+                                                </div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span class="title">标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistright pendding">
+                                                        投票火热进行中
+                                                    </div>
+                                    </li>
+                                    <li>
+                                            <div class="emplisticon">
+                                                    <img src="" alt="">
+                                                    <span class="title">标题名称</span>
+                                                    <span>简介简介简介简介简介简介简介简介</span>
+                                                </div>
+                                                <div class="emplistright pendding">
+                                                        投票火热进行中
+                                                    </div>
+                                    </li>
+                                
+                                </ul>
+                        <div class="pagination-holder clearfix">
+                            <div id="light-pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('.pagination').pagination({
+        pages: 11,
+        cssStyle: 'light-theme'
+    });
+
+$(function(){
+    //算所占比例有颜色部分的宽度
+    var arryList=[];
+    $(".emplistright ul li").each(function(index,item){
+        
+        arryList.push(parseInt($(this).find(".num").text()));
+      
+       
+        
+       
+    })
+        var max=Math.max.apply(Math,arryList);
+        console.log(max);
+        $(arryList).each(function(index,item){
+            if(max==item){
+                $(".emplistright ul li").eq(index).find(".innerpercent").css("width","60%");
+            }else{
+                percentnum=item/max*60+'%'
+                $(".emplistright ul li").eq(index).find(".innerpercent").css("width",percentnum);
+            }
+        })
+})
+
+
+</script>
+
+</html>

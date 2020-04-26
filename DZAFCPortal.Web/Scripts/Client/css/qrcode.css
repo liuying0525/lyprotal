@@ -1,0 +1,15 @@
+﻿/*
+    added by zhanxl 二维码样式优化
+    2019年11月12日 16点56分
+*/
+.normalPanel.card > .title, div#wx_default_tip p:last-child {
+    display: none;
+}
+
+div#wx_default_tip {
+    padding: 35px 0 !important;
+}
+
+    div#wx_default_tip p {
+        font-size: 15px;
+    }

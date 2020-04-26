@@ -1,0 +1,219 @@
+.descriptionconten{
+    padding: 46px 54px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.descriptionconten h4{
+    font-size: 32px;
+    font-weight: normal;
+}
+
+
+.descriptionconten .content{
+    background: #f6f5fa;
+    padding: 28px 116px 54px;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    color: #6d6d6d;
+    margin: 50px 0;
+    box-sizing: border-box;
+    height:auto;
+    /* max-height:90%; */
+}
+.descriptionconten .content h6{
+    font-size:26px;
+    color:#000;
+
+}
+
+.descriptionconten.conveneDes .content h6{
+    font-weight: normal;
+    text-align: left;
+}
+
+.descriptionconten .content>ul li{
+    display: inline-block;
+}
+.descriptionconten .content>ul li span{
+    display: inline-block;
+    line-height:78px;
+    padding:0 8px;
+}
+.descriptionconten .content p{
+    text-align: left;
+    line-height: 30px;
+}
+
+.descriptionconten .content p>span{
+    display: inline-block;
+    line-height: 60px;
+}
+.descriptionconten .content p>span:last-child{
+    padding-left:15px;
+}
+
+.descriptionconten.conveneDes .content,.descriptionconten.appraiseDes .content{
+    padding:0;
+    background: none;
+    position:relative;
+}
+.descriptionconten.conveneDes .content .contenttop{
+    width:100%;
+    overflow: hidden;
+}
+.descriptionconten .contenttop>img{
+float:left;
+width: 25%;
+margin-right:4%;
+/* width:382px; */
+height:197px;
+background: #bdbbc9;
+display: inline-block;
+}
+.conveneDes .contenttop>div.topcenter{
+    width:70%;
+}
+
+.descriptionconten a.sign{
+    background: #5555b9;
+    display: inline-block;
+    height: 42px;
+    width: 148px;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 24px;
+    margin-top: 140px;
+    text-decoration: none;
+}
+.descriptionconten.appraiseDes a.sign{
+    margin-top:0;
+}
+
+.contentbottom{
+    background:rgba(255,255,255,0.75);
+    margin-top:82px;
+}
+
+
+.contentbottom dl dt,.contentbottom dl dd{width: 100%;}
+.contentbottom dl dt{
+    border-bottom: 1px solid #aaaaaa;
+    line-height: 76px;
+    font-size: 20px;
+}
+.contentbottom dl dd{
+    line-height: 52px;
+}
+.contentbottom span{
+    display: inline-block;
+    width:24%;
+}
+
+/* 在线评选 */
+.appraiseDes .contentbottom{
+    background:none;
+    border-top:1px solid #fff;
+}
+
+.radioBox{
+   text-align: left;
+}
+.radioBox input[type="radio"]+label::before{
+    content:'\a0';/*不换行空格*/
+    display:inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-right:.4em;
+    border-radius: 50%;
+    border:1px solid #5554ba;
+    text-indent: .15em;
+    line-height: 1;
+}
+
+.radioBox input[type="radio"].checked+label::before{
+    background-color:#5554ba;
+    background-clip:content-box;
+    padding:.4em;
+}
+.radioBox input[type="radio"]{
+ position: absolute;
+/*clip:rect(0,0,0,0); */
+z-index: 20;
+top: 35px;
+    left: 3px;
+    opacity: 0;
+}
+.radioBox{
+    height:80px;
+    line-height: 80px;
+    position:relative;
+    
+}
+
+.descriptionconten.conveneDes .content{
+    padding:0;
+    background: none;
+}
+.descriptionconten.conveneDes .content .contenttop{
+    width:100%;
+    overflow: hidden;
+}
+.conveneDes .contenttop>div{
+float: left;
+width: 100%;
+}
+.conveneDes .contenttop>div img{
+    width:382px;
+    height:197px;
+    background: #bdbbc9;
+    display: inline-block;
+}
+.conveneDes .contenttop>div a.sign{
+    background: #5555b9;
+display: inline-block;
+height:48px;
+width: 160px;
+line-height: 48px;
+color: #fff;
+border-radius: 30px;
+font-size: 26px;
+margin-top: 50px;
+}
+password: "000000"
+rendom: 1576145072345
+userCode: "administrator"
+
+.imgbox{
+    margin-top: 30px;
+}
+.presenceDes .content h6{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.issue{
+    text-align: left;
+    width:100%;
+}
+.issue li{
+display: inline-block;
+margin:5px 5px 5px 0;
+height:30px;
+line-height: 30px;
+width: 30%;
+}
+.apply{
+    text-align: left;
+}
+.apply li{
+display: block;
+height:24px;
+line-height: 24px;
+
+}
+/* .conveneDes li span,.brief{
+    font-size:14px;
+} */
+

@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseLayout.master.cs" Inherits="DZAFCPortal.Web.Admin.BaseLayout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8,9,10,11" />
+    <title>东正内网门户</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 框架必须的样式引用 Start-->
+    <link href="/Scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--框架必须的样式引用 End-->
+    <!-- 框架必须的脚本引用 Start-->
+    <script src="/Scripts/jquery/jquery-1.11.1.js"></script>
+    <script src="/Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 框架必须的脚本引用 End-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="/Scripts/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 弹层脚本 -->
+    <script src="/Scripts/Admin/ThirdLibs/layer/layer.min.js"></script>
+
+    <!-- 用户自定义的样式和脚本引用 Start-->
+    <link href="/Scripts/Admin/css/leftNav.css" rel="stylesheet" />
+    <link href="/Scripts/Admin/css/ad_base.css" rel="stylesheet" />
+    <link href="/Scripts/Admin/css/ad_layouts.css" rel="stylesheet" />
+    <link href="/Scripts/Admin/css/jqpager.css" rel="stylesheet" />
+    <link href="/Scripts/Admin/css/pagenavi.css" rel="stylesheet" />
+    <link href="/Scripts/Admin/css/smgWeb.css" rel="stylesheet" />
+    <script src="/Scripts/Admin/js/common.js"></script>
+    <!-- 用户自定义的样式和脚本引用 End-->
+
+    <script type="text/javascript">
+        function RefreshParent() {
+            window.opener.location.href = window.opener.location.href;
+            window.close();
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-inline">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

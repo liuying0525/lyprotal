@@ -1,0 +1,113 @@
+@charset "utf-8";
+.right{
+    padding:0 0 0 180px;
+}
+h4{
+    height: 46px;
+    line-height: 46px;
+    font-size: 26px;
+}
+
+.rcleft{
+float: left;
+width:23%;
+background: #f6f5fa;
+}
+.rcleft h4{
+    line-height: 155px;
+   padding-left: 88px;
+   font-weight: normal;
+   height:155px;
+}
+.rcright{
+    float: left;
+    width: 77%;
+    padding: 10%;
+    box-sizing: border-box;
+}
+.portCard{
+    width:100%;
+}
+
+.subNavBox{width:100%;padding-left:40px;box-sizing: border-box;    
+    background: #f6f5fa;}
+            
+.subNav{cursor:pointer;font-size:20px;color:#000;line-height:61px;}
+
+.subNav:hover{color:#5e50b0;}
+
+.currentDd{color:#000;}
+
+.currentDt{}
+
+.navContent{display: none;margin-left: -40px;}
+.navContent li a{display: block;
+    width: 90%;
+    height: 57px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 57px;
+    color: #333;
+    padding: 10px 0;
+    padding-left: 10%;}
+.navContent li a img{
+    height:54px;
+    width:54px;
+    background: gray;
+    display: inline-block;
+    margin-left: 32px;
+    vertical-align: middle;
+    margin-right:20px;
+    border-radius: 10px;
+  
+}
+.navContent li a span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.navContent li a:hover{color:#fff;background-color:rgba(133,121,195,.8)
+}
+.subNavicon{
+    margin-right:26px;
+    display: inline-block;
+    width:0;
+    height:0;
+    border-top:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:8px solid #313133;
+    transition: all .5s;
+
+}
+
+.currentDd .subNavicon{
+    transform: rotate(90deg);
+}
+.portCardtop{
+    border-bottom:2px solid rgba(170,170,170,.6);
+    text-align: center;
+}
+.portCardtop .headPortrait{
+    width:164px;
+    display: inline-block;
+}
+.portCardtop .headPortrait img{
+    width: 164px;
+    height:164px;
+    border-radius: 50%;
+}
+.portCardtop .headPortrait span{
+    display: inline-block;
+    line-height: 55px;
+    padding-bottom: 20px;
+}
+.portCardbottom{
+
+    padding-top:30px;
+}
+.portCardbottom span{
+    display: block;
+    width: 100%;
+    padding-left: 40%;
+    box-sizing: border-box;
+    line-height: 40px;
+}

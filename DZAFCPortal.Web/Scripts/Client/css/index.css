@@ -1,0 +1,355 @@
+.rightOne {
+    flex: 4.2;
+    padding-left: 20px;
+}
+
+.oneContent {
+    display: inline-block;
+    width: 100%;
+    min-height: 100px;
+    -webkit-box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.1);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+}
+
+.oneNews {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #111111;
+}
+
+.redNews {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.newsInfoRed {
+    position: absolute;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: #ff4132;
+    font-size: 12px;
+}
+
+.newsInfo {
+    float: left;
+}
+
+.newsTime {
+    float: right;
+    font-size: 14px;
+    color: #919191;
+}
+
+.newDesc {
+    position: relative;
+    height: 40px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #919191;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.oneDl {
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.oneDl dt {
+    float: left;
+    color: #111111;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.oneDl dd {
+    float: right;
+    color: #919191;
+    width: 30%;
+    text-align: right;
+}
+
+.twoDl dt {
+    width: 40%;
+    color: #3b3b3b;
+}
+
+.twoDl dd {
+    width: 60%;
+    color: #3b3b3b;
+}
+
+.oneImg {
+    display: block;
+    width: 100%;
+}
+
+.onePart .title {
+    font-size: 14px;
+    height: 22px;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.onePart .name {
+    color: #383286;
+    float: left;
+}
+
+.onePart .getMore {
+    color: #5d5c5c;
+    float: right;
+    cursor: pointer;
+}
+
+.rightTwo {
+    flex: 3.5;
+    margin: 0 20px;
+}
+
+.rightTwo .oneContent {
+    display: flex;
+}
+
+.twoLc {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.twoZs {
+    flex: 1;
+    font-size: 15px;
+    text-align: center;
+    color: #3b3b3b;
+}
+
+.zsTitle {
+    height: 30px;
+    line-height: 30px;
+}
+
+.zsText {
+    height: 30px;
+    line-height: 30px;
+    color: #5655b9;
+    cursor: pointer;
+}
+
+.zsText span {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5655b9;
+}
+
+.twoTypes {
+    font-size: 14px;
+    color: #5d5c5c;
+    display: flex;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.twoType {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+    height: 22px;
+}
+
+.twoType span {
+    /*border-bottom: 3px solid transparent;*/
+    padding-bottom: 10px;
+}
+
+.activeTwoType {
+    color: #383286;
+}
+
+.activeTwoType span {
+    /*border-bottom: 3px solid #383286;*/
+    background: url("../images/typeBg.png") no-repeat bottom center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.rightThree {
+    flex: 2;
+    /*background:peachpuff;*/
+}
+
+.rightThree .title {
+    color: #383286;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.threeXts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.threeXt {
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.threeXt img {
+    display: block;
+    width: 100%;
+}
+
+.threeItem {
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.threeTxl {
+    padding-top: 10px;
+}
+
+.threeTxl label {
+    font-size: 14px;
+    color: #3b3b3b;
+    float: left;
+}
+
+.threeTxl input {
+    border: none;
+    outline: none;
+    height: 26px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    width: 80%;
+    float: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #e0e1e7;
+    padding: 0 20px;
+}
+
+.search {
+    height: 26px;
+    width: 100%;
+    background: url("../images/searchBtn.png") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border: none;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.timeContent {
+    background: url("../images/time.png") no-repeat center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin-bottom: 15px;
+    /*display: flex;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 85px 20px 0;
+}
+
+.threeTime {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 8px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.threeTime .month {
+    color: #7d7d83;
+    font-weight: bolder;
+    font-size: 18px;
+    flex: 3;
+}
+
+.threeTime .today {
+    flex: 7;
+    font-size: 14px;
+    color: #000;
+    background: url("../images/qing.png") no-repeat center right;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.threeWeather {
+    display: flex;
+    justify-content: space-between;
+}
+
+.threeWeather .day {
+    flex: 3;
+    color: #5655b9;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.threeWeather .timeBox {
+    flex: 7;
+    font-size: 14px;
+    color: #000;
+}
+
+.nong span:nth-of-type(1) {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.nong span:nth-of-type(2) {
+    float: right;
+    padding-bottom: 5px;
+}
+
+.yang span:nth-of-type(1) {
+    float: left;
+}
+
+.yang span:nth-of-type(2) {
+    float: right;
+}

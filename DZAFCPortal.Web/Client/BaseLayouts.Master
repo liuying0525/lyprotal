@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseLayouts.master.cs" Inherits="DZAFCPortal.Web.Client.BaseLayouts" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/Scripts/Client/css/index.css" />
+    <%--<link rel="stylesheet" href="/Scripts/Client/css/employees.css" />--%>
+    <script src="/Scripts/jquery/jquery.min.js"></script>
+    <script src="/Scripts/Client/js/clientCommon.js"></script>
+    <%--<script src="/Scripts/Client/js/public.js"></script>--%>
+    <script type="text/javascript">
+        $(function () {
+            var top_id = getQueryString('TopID');
+            $("ul.types li[id='" + top_id + "']").addClass('activeType').siblings('li').removeClass('activeType');
+            $('#left_navs li').on('click', function () {
+                if ($(this).hasClass('activeType')) {
+                    return;
+                } else {
+                    $(this).addClass('activeType').siblings('li').removeClass('activeType');
+                }
+            });
+            $(".set-title li:first").addClass("current");
+            $('.set-title').on("click", "li", function (e) {
+                e.preventDefault();
+                $(this).addClass("current").siblings().removeClass("current");
+
+            });
+        })
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="height: 100%;">
+        <div class="indexHeader">
+            <div class="headerleft leftP">
+                <img src="../Scripts/Client/images/indexLogo.png" class="indexLogo" alt="" />
+            </div>
+            <ul class="set-title hd" id="top_navs">
+                <asp:Repeater ID="rptTopNav" runat="server">
+                    <ItemTemplate>
+                        <li id='<%#Eval("ID") %>'><a href='#'><%#Eval("Title") %></a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+            <div class="headerright rightP">
+                <div class="userSetting rightP">
+                    <img src="../Scripts/Client/images/tips3.png" alt="" class="indexOut" />
+                    <ul class="settingBox">
+                        <li><a href="javascript:void(0);">修改密码</a></li>
+                        <li><a href="javascript:void(0);">个人信息</a></li>
+                        <li><a href="javascript:void(0);">退出登录</a></li>
+                        <li><a href="javascript:void(0);">后台管理</a></li>
+                    </ul>
+                </div>
+                <div class="userInfos rightP">
+                    <p>Ares</p>
+                    <p>职位职位职位</p>
+                </div>
+                <div class="indexUser rightP">
+                    <img src="../Scripts/Client/images/indexUser.png" alt="" />
+                </div>
+                <div class="indexMessage rightP">
+                    <div class="messages">IT通知：关于CRM维护通知</div>
+                </div>
+                <div class="indexInfo rightP">
+                    <img src="../Scripts/Client/images/indexInfo.png" alt="" />
+                    <div class="messagesNum">33</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="left">
+                <ul class="types" id="left_navs">
+                    <asp:Repeater ID="rptLeftNav" runat="server" OnItemDataBound="rptLeftNav_ItemDataBound">
+                        <ItemTemplate>
+                            <li class="<%# Container.ItemIndex==0 ? "activeType" : "" %> type" id='<%#Eval("ID") %>'>
+                                <a href='#'>
+                                    <img src="<%#Eval("IconUrl") %>" alt="" /><%#Eval("Title") %></a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <%--<li class="type activeType" onclick="activeImgFunc(0)" data-href="index">
+                        <img src="../Scripts/Client/images/icon-index40.png" alt="" />系统首页</li>
+                    <li class="type" onclick="activeImgFunc(1)" data-href="platform">
+                        <img src="../Scripts/Client/images/icon-index0.png" alt="" />工作平台</li>
+                    <li class="type" onclick="activeImgFunc(2)" data-href="">
+                        <img src="../Scripts/Client/images/icon-index1.png" alt="" />公司动态</li>
+                    <li class="type" onclick="activeImgFunc(3)" data-href="">
+                        <img src="../Scripts/Client/images/icon-index2.png" alt="" />文档管理</li>
+                    <li class="type" style="margin: 0;" onclick="activeImgFunc(4)" data-href="">
+                        <img src="../Scripts/Client/images/icon-index3.png" alt="" />员工之家</li>--%>
+                </ul>
+            </div>
+            <div class="right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

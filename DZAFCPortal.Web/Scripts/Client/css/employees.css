@@ -1,0 +1,169 @@
+﻿@charset "utf-8";
+.set-middle-content>ul>li{
+    padding:17px 0;
+     border-bottom: 2px #f6f5fa solid; 
+    cursor: pointer; 
+}
+.set-middle-content>ul>li:hover{
+    background: rgba(255,255,255,0.26);
+}
+
+.employees .set-middle-content>ul>li div{
+    display: inline-block;
+    padding-left:74px;
+    vertical-align: middle;
+}
+.emplisticon{
+    width:36%;
+}
+.emplisticon img{
+    height:64px;
+    width:64px;
+    float: left;
+    background: #bdbbc9;
+    margin-right: 20px;
+}
+.set-middle-content>ul li .emplisticon span{
+    display: block;
+    height:32px;
+    line-height: 32px;
+    max-width: 100%; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    width:auto;
+
+}
+.emplisticon span:last-child{
+    color:#3f3f41;
+}
+
+.appraise .emplistright{
+  padding-left: 158px !important;
+  width:60%;
+}
+.appraise .emplisticon{
+    width:20%;
+}
+.emplistright ul li{
+    float: left;
+    width:30%;
+    padding:0 1%;
+}
+.emplistright ul li span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.emplistright ul li span.percent{
+    width:60%;
+    height:15px;
+    border-radius: 15px;
+}
+.emplistright ul li span.num{
+    width:20%
+}
+.percentone{
+background: #e25d5e;
+
+}
+.numone{
+    color:#e25d5e;
+}
+.percenttwo{
+    background: #786bdf;
+}
+.numtwo{
+   
+    color:#786bdf;
+    
+    }
+.percentthree{
+ background:#f365a2;   
+}
+.numthree{
+    color:#f365a2;
+}
+.innerpercent{
+    width:100%;
+    border-radius: 15px;
+    height:15px;
+}
+.emplisticon .title{
+    color:#5e50af;
+}
+.pendding{
+    color:#ff0101;
+   
+}
+
+
+.apsnetPaper{
+
+    padding: 0 20px;
+    margin: 10px 0 20px 0;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+}
+.apsnetPaper:after{
+
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.paginator{
+display:block;
+
+
+}
+.paginator>a,.paginator>span{
+float: left;
+    color: #666;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    text-align: center;
+    min-width: 14px;
+    margin: 0 5px 0 0;
+    border: 1px solid rgba(255,255,255,0);
+    border-radius: 100%;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    color: #575757;
+}
+
+
+.paginator>a:nth-child(2),.paginator>a:nth-last-child(2) {
+    background: none;
+    color: #575757;
+    box-shadow: none;
+    border: none;
+}
+.paginator .cpb {
+    background: #5e50b0;
+    color: #FFF;
+    border-color: #5e50b0;
+    box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+    cursor: default;
+}
+
+.employees .set-middle-content>ul>li div.emplistime{
+    width:30%;
+   padding-left:0;
+}
+.emplistime>div{
+    width:100%;
+
+}
+.emplistime>div span{
+    display: inline-block;
+    height:32px;
+    line-height: 32px;
+    
+}

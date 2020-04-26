@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+
+
+
+
+.set-middle-content>ul li.file>ul>li span:first-child {
+    padding-left: 120px;
+    width: 27%;
+}
+
+.set-middle-content>ul li span:last-child {
+    padding-right: 0;
+
+}
+
+.set-middle-content>ul li:nth-child(even) {
+    background: rgba(255, 255, 255, .5);
+}
+
+
+/* 发起流程 */
+
+.sponsor .set-middle-content>ul li {
+    padding: 0;
+}
+
+.sponsor .set-middle-content>ul li span {
+    padding: 17px 0;
+    padding-left: 74px;
+}
+
+.file>ul {
+    display: none;
+}
+
+.file i {
+    margin-right: 15px;
+}
+
+.set-middle-content>ul li.file ul li span.star-five {
+
+    position: relative;
+    display: inline-block;
+    color: #b7b8bd;
+    width: 0px;
+    height: 0px;
+    border-right: 15px solid transparent;
+    border-bottom: 10.5px solid #b7b8bd;
+    border-left: 15px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    padding: 0;
+    margin-right: 4%;
+    margin-left: 9%;
+    cursor: pointer;
+}
+
+.set-middle-content>ul li.file ul li span.star-six {
+    border-bottom-color: #614fb2;
+}
+
+.set-middle-content>ul li.file ul li span.star-five:before {
+    border-bottom: 12px solid #b7b8bd;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -6.75px;
+    left: -9.75px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+
+}
+
+.set-middle-content>ul li.file ul li span.star-six.star-five:before {
+    border-bottom-color: #614fb2;
+}
+
+.set-middle-content>ul li.file ul li span.star-five:after {
+    position: absolute;
+    display: block;
+    color: #b7b8bd;
+    top: .45px;
+    left: -15.75px;
+    width: 0px;
+    height: 0px;
+    border-right: 15px solid transparent;
+    border-bottom: 10.5px solid#b7b8bd;
+    border-left: 15px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    content: '';
+}
+
+.set-middle-content>ul li.file ul li span.star-six.star-five:after {
+    border-bottom-color: #614fb2;
+}
+
+.sponsor .set-middle-content>ul li:nth-child(even) {
+    background: none;
+}
+
+.sponsor .set-middle-content>ul li.file>span {
+    background: rgba(255, 255, 255, .5);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.set-middle-content>ul li span {
+    display: inline-block;
+    width: 10%;
+    padding-right: 5%;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.set-middle-content>ul li span:first-child {
+    width: 30%;
+    padding-left: 74px;
+    text-align: left;
+}

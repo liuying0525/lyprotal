@@ -1,0 +1,85 @@
+﻿.pagenavi {
+    clear: both;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+    .pagenavi a, .pagenavi a:visited {
+        margin-right: 10px;
+        color: #000000;
+        outline: 0px;
+        font-size: 12px;
+        font-family: "微软雅黑", Arial;
+        text-transform: capitalize;
+        display: block;
+        display: inline-block;
+        border: solid 1px #DADADA;
+        border-bottom: solid 1px #bfbfbf;
+        border-right: solid 1px #bfbfbf;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        height: 27px;
+        line-height: 24px;
+        padding: 0 10px;
+        background: #EDECEC;
+        text-decoration: none;
+    }
+
+        .pagenavi a:hover {
+            text-decoration: none;
+            color: #007A9C;
+            border: solid 1px #007A9C;
+            background-color: #eaeaea;
+            cursor: pointer;
+        }
+
+    .pagenavi .current {
+        margin-right: 10px;
+        color: #ffffff;
+        outline: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: "微软雅黑", Arial;
+        text-transform: capitalize;
+        display: block;
+        display: inline-block;
+        border: solid 1px #ff6a00;
+        border-bottom: solid 1px #ff6a00;
+        border-right: solid 1px #ff6a00;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        height: 27px;
+        line-height: 24px;
+        padding: 0 10px;
+        background: #fa8a3a;
+    }
+
+    .pagenavi .pages {
+        padding: 0 5px;
+        margin-right: 0px;
+    }
+
+    .pagenavi .cpb{
+        margin-right: 10px;
+        color: #ffffff;
+        outline: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: "微软雅黑", Arial;
+        text-transform: capitalize;
+        display: block;
+        display: inline-block;
+        border: solid 1px #ff6a00;
+        border-bottom: solid 1px #ff6a00;
+        border-right: solid 1px #ff6a00;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        height: 27px;
+        line-height: 24px;
+        padding: 0 10px;
+        background: #fa8a3a;
+    }
